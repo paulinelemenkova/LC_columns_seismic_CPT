@@ -1,0 +1,201 @@
+\documentclass[final,3p,times,twocolumn]{elsarticle}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Archives of Acoustics}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+% \author{\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%% \fntext[label3]{}
+
+\title{Seismic CPT for testing depth stabilization with LC columns}
+
+\author[label1,label2]{Per Lindh}
+
+\affiliation[label1]{organization={Swedish Transport Administration, E-mail: per.lindh@trafikverket.se},
+             addressline={Gibraltargatan 7},
+             city={Malmö},
+%%             postcode={},
+	country={Sweden}}
+\affiliation[label2]{organization={Lund University, Lunds Tekniska Högskola LTH (Faculty of Engineering), Department of Building and Environmental Technology, Division of Building Materials, E-mail: per.lindh@byggtek.lth.se},
+             addressline={Box 118},
+             city={Lund},
+             postcode={SE-221-00},
+             country={Sweden}}
+
+\author[label3]{Polina Lemenkova}
+\affiliation[label3]{organization={Université Libre de Bruxelles (ULB), École polytechnique de Bruxelles (Brussels Faculty of Engineering), Laboratory of Image Synthesis and Analysis (LISA). E-mail: polina.lemenkova@ulb.be},
+             addressline={Campus de Solbosch, ULB -- LISA CP165/57, Av. F. D. Roosevelt 50},
+             city={Brussels},
+             postcode={B-1050},
+             country={Belgium}}
+
+\begin{abstract}
+%% Text of abstract
+
+\end{abstract}
+
+
+\begin{keyword}
+
+civil engineering \sep stabilization \sep compressive strength \sep soil \sep cement \sep lime \sep seismic waves
+
+\PACS 81.40.Cd \sep 81.40.Ef \sep 62.20.Qp \sep 83.50.Xa \sep 45.70.Mg \sep 92.40.Lg \sep 81.40.Lm \sep 62.20.M-
+\MSC 76Axx \sep 74Exx \sep 74Fxx
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
+\section{Introduction}
+
+\lipsum[1-10]
+
+\label{}
+
+\section{Methods}
+
+\lipsum[1-10]
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_1}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_2}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_3}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_4}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_5}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_6}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_7}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_8}
+		\caption{}
+	\end{subfigure}
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{AEG35_9}
+		\caption{}
+	\end{subfigure}%
+\caption{AEG35}
+\label{figAEG35}
+\end{figure*}
+
+\section{Results}
+
+\lipsum[1-2]
+
+
+
+\newpage
+\lipsum[1-10]
+
+\newpage
+\section{Discussion}
+
+\lipsum[1-12]
+
+\section{Conclusion}
+
+\lipsum[1-12]
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+%%  \bibliographystyle{elsarticle-num} 
+%%  \bibliography{<your bibdatabase>}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+\begin{thebibliography}{00}
+
+%% \bibitem{label}
+%% Text of bibliographic item
+
+\bibitem{}
+
+\end{thebibliography}
+\end{document}
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.

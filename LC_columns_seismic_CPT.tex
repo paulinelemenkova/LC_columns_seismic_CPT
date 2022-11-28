@@ -124,8 +124,21 @@ Natural resonance frequency (fn) (also called natural natural frequency) is the 
 	V_{P1D} =2Lf_d
 \end{equation}
 
-where $f_d$ is the damped resonance frequency (Rydén, 2013).
-The seismic measurements were performed as a resonance frequency measurement of P-wave and flex-wave, see Figure 5 and Figure 6.
+where $f_d$ is the damped resonance frequency (Ryd\'en, 2013).
+The seismic measurements were performed as a resonance frequency measurement of P-wave and flex-wave, see Figure \ref{fig:04}.
+
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_04a.jpg}
+		\caption{}
+	\end{subfigure} \\ \vfill
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_04b.jpg}
+		\caption{}
+	\end{subfigure}
+	\caption{Setup of test measurements. (a): P-wave frequency of sample body by free-resonance column approach; (b): flex wave frequency (ff) of sample body using free resonance frequency of column.}
+\label{fig:04}
+\end{figure}
 
 The advantage of P-wave measurements is that these can be carried out on specimens while they harden in the sleeve without the sleeve affecting the measurements to any great extent. The disadvantage of measuring the P-wave is that it is strongly affected when the soil starts to become saturated with water, when Sr goes towards one. When the earth is saturated with water, not only the earth's P-wave velocity is measured, but also the water's P-wave velocity, which is about 1500 m/s, which means incorrect results. This is usually not a problem in laboratory-made specimens, as these cannot be saturated with water without very high pressures. 
 
@@ -137,19 +150,43 @@ The evaluation of the shear wave velocity is calculated according to Equation \r
 	V_s = 2Lf_f
 \end{equation}
 
-To measure true hear waves in laboratories, you have to use bending elements (so-called bender elements), this methodology is cumbersome and takes a long time. To get around this, a new methodology has been tried at SGI to evaluate the torsional mode and thus be able to better calculate the shear wave, see Figure 7.
+To measure true hear waves in laboratories, you have to use bending elements (so-called bender elements), this methodology is cumbersome and takes a long time. To get around this, a new methodology has been tried at SGI to evaluate the torsional mode and thus be able to better calculate the shear wave, see Figure \ref{fig:05}.
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_05.jpg}
+	\caption{A sketch of the experimental setup for measuring torsion mode according to the free-free resonance column principle.}
+\label{fig:05}
+\end{figure}
 
 However, this methodology is not yet sufficiently tested and must be verified with more measurements but also analyzed using FEM to check that the correct mode is evaluated. To evaluate how both P-wave velocity and shear strength develop with time, reference samples were manufactured. The choice of the P-wave velocity in the laboratory examinations is that it can also be measured on samples stored in sleeves. However, the length of the sleeves must be equal to the length of the sample. Otherwise, the resonance frequency of the sleeve is measured, see Appendix 1. The reference samples consisted of a standard recipe consisting of 50\% cement and 50\% quicklime. The binder quantities were chosen corresponding to 80, 100 and 120 kg/m3. After 7 days, P-wave velocity and then shear strength were evaluated on two samples from each binder quantity. This was repeated at 14, 21, 28 and 80 days. This type of correlation has previously been used for surface-stabilized specimens with good results (Rydén et al, 2006). The choice of 80 days was based on degree days to compare with the 28 day strength of samples stored at 20 oC. A better procedure would have been to use maturity numbers (MT) instead of degree days, see SGI Report 30, j.m.f. section 3.1.2.
 
 \subsection{Seismic CPT}
 
-The CPT probe is performed according to the standard SS-EN ISO 22476-1:2012. During a CPT probing, a cylindrical probe with a cross-sectional area of 1000 mm2 is driven where the probe has a tip angle of 60 degrees. The lowering takes place at a constant speed of 20 mm/s. At the probe tip, the force required to drive the probe down is measured. Through a backlash coupling, the casing friction is measured, which can thus be distinguished from the tip pressure. Furthermore, the pore pressure generated during the drive-down is measured via a filter system just behind the probe tip. Figure 8 shows the construction of a CPT probe.
+The CPT probe is performed according to the standard SS-EN ISO 22476-1:2012. During a CPT probing, a cylindrical probe with a cross-sectional area of 1000 mm2 is driven where the probe has a tip angle of 60 degrees. The lowering takes place at a constant speed of 20 mm/s. At the probe tip, the force required to drive the probe down is measured. Through a backlash coupling, the casing friction is measured, which can thus be distinguished from the tip pressure. Furthermore, the pore pressure generated during the drive-down is measured via a filter system just behind the probe tip. Figure \ref{fig:06} shows the construction of a CPT probe.
 
-During the probing, the tip resistance is recorded, which is the force per unit area obtained by dividing the measured force by the cross-sectional area of the tip. This peak pressure is denoted qc if the pore pressure is not taken into account and qt if the value is corrected taking into account error sources from the pore effect. In the special case when $u \approx 0$ or is negligible, qc becomes qt. The tip resistance is given in MPa or kPa. The CPT probe can be reported according to Figure 9.
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_06.jpg}
+	\caption{Schematic diagram of the composition of a CPT probe. From SGI Information 15.}
+\label{fig:06}
+\end{figure}
+
+During the probing, the tip resistance is recorded, which is the force per unit area obtained by dividing the measured force by the cross-sectional area of the tip. This peak pressure is denoted qc if the pore pressure is not taken into account and qt if the value is corrected taking into account error sources from the pore effect. In the special case when $u \approx 0$ or is negligible, qc becomes qt. The tip resistance is given in MPa or kPa. The CPT probe can be reported according to Figure \ref{fig:07}.
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_07.jpg}
+	\caption{A protocol with standard scales evaluated using Conrad software, version 3.1.}
+\label{fig:07}
+\end{figure}
 
 Seismic CPT involves, in addition to a regular CPT sounding, also a measurement of shear and compression waves. The measurements are performed with a series-connected device that is placed between the CPT probe and the probing rods. The measurements are usually performed by stopping the CPT probe at the level you want to measure at and the measurement is performed. However, there are systems with continuous measurement, but this must be stopped after all when splicing bars.
 
-There are two different principles, one principle is based on two rounds of accelerometers with a fixed distance between the accelerometers, see Figure 10. The accelerometers measure in the x-, y- and z-direction.
+There are two different principles, one principle is based on two rounds of accelerometers with a fixed distance between the accelerometers, Figure \ref{fig:08}. The accelerometers measure in the x-, y- and z-direction, where y-led is into the pitch of the character. This method is sometimes referred to as “true-time”, as the fixed distance between the accelerometers provides a safer determination of the time difference and thus a better determination of the ground running speed, Figure \ref{fig:08}.
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_08.jpg}
+	\caption{Schematic diagram of a seismic CPT probe with dual accelerometers. The accelerometers in the figure are described with A1 and A2. }
+\label{fig:08}
+\end{figure}
 
 This principle is called "true-time" as the calculation of walking speed is based on the time measurement between the first wave propagation to accelerometers 1 and 2. As the distance between the accelerometers is constant, the speed can be calculated directly.
 The second principle is based on carrying out the measurements with only one set of accelerometers with registration in three directions (x-, y- and z-direction). The measurement is first performed at one level, after which the CPT probing continues and a new measurement is performed at the next level, see Figure 11.

@@ -14,6 +14,7 @@
 \graphicspath{{figures/}} % path to folder with figures
 \usepackage{chemformula}
 \usepackage[version=4]{mhchem}
+\usepackage{gensymb}  % \textdegree
 
 \journal{Archives of Acoustics}
 
@@ -152,7 +153,37 @@ Furthermore, there are limitations with evaluating the firmness in different lay
 
 In a binder-stabilized soil, pozzolanic reactions take place for many months, which is why the properties of a stabilized soil partly change over time, but also undergo a change in terms of texture, etc. The change in the clay's texture is based on ion exchange in the clay and on a change in the water ratio. The ion exchange is described by the lyotropic series, as below (Andersson, 1960): 
 
-\ch{Li+} $<$ \ch{Na+} $<$ \ch{H+} $<$ \ch{K+} $<$ \ch{NH4+} $<$$<$ \ce{Mg^{++}} $<$ \ch{Ca^{++}} $<$$<$ \ch{Al^{+++}}
+\ch{Li+} $<$ \ch{Na+} $<$ \ch{H+} $<$ \ch{K+} $<$ \ch{NH4+} $<$$<$ \ce{Mg^{++}} $<$ \ch{Ca^{++}} $<$$<$ \ch{Al^{+++}}.
+
+The change in the structure of the clay mineral is shown in Figure 12.
+
+This means that the stabilized clay has a change in plasticity, yield strength, etc. The degree of change depends both on the type of clay mineral but also on the type of binder. These changes to the structure of the stabilized clay mean that the empirical relationships that exist between tip pressure and the shear strength of the clay are not correct for a stabilized clay. 
+
+To be able to evaluate samples stored at different temperatures, e.g. samples stored in climate rooms at 7 oC and samples that are manufactured in situ with a different temperature development and cooling compared to laboratory stored samples can be used. The maturity number is defined according to Equation \ref{eq:05}:
+
+\begin{equation}\label{eq:05}
+	M_T =[ 20+(T-20)\times K]^2 \times \sqrt{t}
+\end{equation}
+
+Where T = temperature (\textdegree C), t = time (days), K = material-dependent empirical constant.
+The material-dependent empirical constant K is the most easily calculated by storing samples at different temperatures, e.g., 7 and 20\textdegree C. The samples are then measured with resonance frequency measurement at different time intervals. The results from the seismic measurements are then used to fit the curves so that they coincide, i.e. different values of K are used, after which the curves are compared. A common value of K is 0.5, but the literature has also shown $K \approx 1$ (Åhnberg and Holm, 1987).
+
+
+\section{Results}
+\subsection{Results from the L/C pillar recipes}
+\subsubsection{Strength determination}
+
+In the testing of binder combinations, a reference recipe of CEM II and quicklime was used in a mutual ratio of 50/50. Evaluated shear strength for the reference samples at different curing times is reported in Figure 13.
+
+In order to evaluate the effects of different binder combinations on the shear strength of the stabilized material, a test set-up according to the Simplex Centroid was used. The result is presented as a response surface. Pareto diagrams were used for the evaluation. This shows the effect of the different components on the result. A significance level of 0.05 was used, see Figure 14. For a binder amount corresponding to 80 kg/m3, the result is reported in Figure 15. The result shows a clear positive interaction between the various components (Cement, quicklime and LKD) in a binder combination, see Figure 14.
+
+Positive interaction means that the components generate a higher strength together than can be expected from a linear regression between the effects of the individual binders. The model has an explanation rate of 95\%, i.e. the model explains 95\% of the variations in shear strength.
+
+The test set-up for the binder amount of 100 kg/m3 clay contains an extended number of tests. For comparison with the other amounts of binder, an analysis was also performed with the same number of trial points as for 80 and 120 kg of binder, respectively, see Figure 16. The result from this analysis shows a somewhat lower positive interaction between the binders. 
+
+However, this must be compared with the result from the analysis of the extended trial presented in Figure 17. In the trial set-up with more internal trial points, the resolution increases and the model's degree of explanation increases from 95\% to 97.5\%1. The extended model shows a greater interaction between the various binder components. A three-dimensional presentation of the response surface is shown in Figure 18. An extended model would probably have affected the results in the other models as well.
+
+For the mixing amount corresponding to 120 kg of binder per cubic meter of clay, the response surface was obtained according to Figure 19. At this mixing amount, the positive interaction of the binder components was small. The degree of explanation of the response surface was 98\%.
 
 \begin{figure*}[!htbp]
 \centering

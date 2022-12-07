@@ -65,6 +65,9 @@ civil engineering \sep stabilization \sep compressive strength \sep soil \sep ce
 \section{Introduction}
 
 \subsection{Background}
+
+The Cone Penetration Testing (CPT) is one of the most used and accepted soil methods for soil investigation 
+
 \textcolor{red}{\lipsum[1-10]}
 
 \begin{figure*}[h!]
@@ -81,7 +84,7 @@ The background to the project is the need to adequately evaluate the quality of 
 \section{Methods}
 
 \subsection{Fieldwork}
-In this project, the field investigations were carried out during the period of 7/11/2016 - 10/11/2016 in Norvik area. The technical equipment included a multipurpose drilling rig GEORIG -- Model 607 used for soundings. The GEORIG -- 607, developed by Geotech AG, was selected as a proper instrument for drilling, since it is equipped with the necessary devices for soil rock drilling, Swedish weight sounding, dynamic sounding, Standard Penetration Test (SPT), Cone Penetration Testing (CPT). The GEORIG 607 was anchored with a screw to achieve the sufficient holding force, Figure \ref{fig:01}. 
+In this project, the field investigations were carried out during the period of 7--10 November 2016 in Norvik. The technical equipment included a multipurpose drilling rig GEORIG -- Model 607 used for soundings. The GEORIG -- 607, developed by Geotech AG, was selected as a proper instrument for drilling, since it is equipped with the necessary devices for soil rock drilling, Swedish weight sounding, dynamic sounding, Standard Penetration Test (SPT), Cone Penetration Testing (CPT). The GEORIG 607 was anchored with a screw to achieve the sufficient holding force, Figure \ref{fig:01}. 
 
 \begin{figure*}[h!]
  \centering
@@ -123,8 +126,8 @@ Natural resonance frequency (fn) (natural frequency) is the number of oscillatio
 	V_{P1D} =2Lf_d
 \end{equation}
 
-where $f_d$ is the damped resonance frequency (Ryd\'en, 2013).
-The seismic measurements were performed as a resonance frequency measurement of P-wave and flex-wave, see Figure \ref{fig:04}.
+where $f_d$ is a damped resonance frequency \cite{Rydenetal2006}.
+Seismic measurements were performed as a resonance frequency measurement of P-wave and S-wave, Figure \ref{fig:04}.
 
 \begin{figure}[H]
 	\begin{subfigure}[b]{0.7\textwidth}
@@ -135,13 +138,13 @@ The seismic measurements were performed as a resonance frequency measurement of 
 		\includegraphics[width=0.7\textwidth]{Fig_04b.jpg}
 		\caption{}
 	\end{subfigure}
-	\caption{Setup of test measurements. (a): P-wave frequency of sample body by free-resonance column approach; (b): flex wave frequency (ff) of sample body using free resonance frequency of column.}
+	\caption{Setup of test measurements. (a): P-wave frequency of a sample body by a free-resonance column approach; (b): flex wave frequency (ff) of a sample body using a free resonance frequency of column.}
 \label{fig:04}
 \end{figure}
 
-The advantage of P-wave measurements is that these can be carried out on specimens while they harden in the sleeve without the sleeve affecting the measurements to any great extent. The disadvantage of measuring the P-wave is that it is strongly affected when the soil starts to become saturated with water, when Sr goes towards one. When the earth is saturated with water, not only the earth's P-wave velocity is measured, but also the water's P-wave velocity, which is about 1500 m/s, which means incorrect results. This is usually not a problem in laboratory-made specimens, as these cannot be saturated with water without very high pressures. 
+The advantage of the P-wave measurements is that these can be carried out on the specimens while they harden in the sleeve without the sleeve affecting the measurements to any great extent. The disadvantage of measuring the P-wave is that it is strongly affected when soil starts to become saturated with water, when Sr goes towards one. When soil is saturated with water, not only the P-wave velocity of soil sample is measured, but also the P-wave velocity of water, which is about 1500 m/s. This may lead to the incorrect results. However, this bias is not significant in the laboratory-made specimens, because these cannot be saturated with water without very high pressures. 
 
-By instead measuring the shear wave when it is not affected by high water saturation levels, this problem is bypassed. The measurement of the true shear wave is, however, more difficult with a free-free resonant column setup. A common, but not entirely accurate, way to evaluate the shear wave is to measure the bending mode also called the flex mode or transverse mode (Verástegui-Flores et al, 2015). According to this article, the shear wave velocity is underestimated by about 5\% for a specimen with a slenderness factor of 2 (=length/diameter) and a = 0.2. The setup for measuring the flex mode is shown in Figure 6.
+Measuring the shear wave instead enables to solve problem in cases when it is not affected by high water saturation levels. However, the measurement of the true shear wave is more difficult with a free-free resonant column setup. A common, way to evaluate shear wave, although not entirely accurate, is to measure the bending mode, i.e., flex mode or transverse mode \cite{VERASTEGUIFLORES2015943}. According to this approach, shear wave velocity is underestimated by ca. 5\% for a specimen with a slenderness factor of 2 (slenderness is a ratio of length/diameter) and a = 0.2. The setup for measuring flex mode is shown in Figure \ref{fig:04} (b).
 
 The evaluation of the shear wave velocity is calculated according to Equation \ref{eq:02}. 
 
@@ -149,7 +152,7 @@ The evaluation of the shear wave velocity is calculated according to Equation \r
 	V_s = 2Lf_f
 \end{equation}
 
-To measure true hear waves in laboratories, you have to use bending elements (so-called bender elements), this methodology is cumbersome and takes a long time. To get around this, a new methodology has been tried at SGI to evaluate the torsional mode and thus be able to better calculate the shear wave, see Figure \ref{fig:05}.
+To measure true hear waves in laboratories, you have to use bending elements (so-called bender elements), this methodology is cumbersome and takes a long time. To get around this, a new methodology has been tried at SGI to evaluate the torsional mode and thus be able to better calculate shear wave, Figure \ref{fig:05}. However, this methodology is not yet sufficiently tested and must be verified with more measurements and analysis using FEM to check that the correct mode is evaluated. 
 
 \begin{figure}[H]
 	\includegraphics[width=7cm]{Fig_05.jpg}
@@ -157,11 +160,13 @@ To measure true hear waves in laboratories, you have to use bending elements (so
 \label{fig:05}
 \end{figure}
 
-However, this methodology is not yet sufficiently tested and must be verified with more measurements but also analyzed using FEM to check that the correct mode is evaluated. To evaluate how both P-wave velocity and shear strength develop with time, reference samples were manufactured. The choice of the P-wave velocity in the laboratory examinations is that it can also be measured on samples stored in sleeves. However, the length of the sleeves must be equal to the length of the sample. Otherwise, the resonance frequency of the sleeve is measured, see Appendix 1. The reference samples consisted of a standard recipe consisting of 50\% cement and 50\% quicklime. The binder quantities were chosen corresponding to 80, 100 and 120 kg/m3. After 7 days, P-wave velocity and then shear strength were evaluated on two samples from each binder quantity. This was repeated at 14, 21, 28 and 80 days. This type of correlation has previously been used for surface-stabilized specimens with good results (Rydén et al, 2006). The choice of 80 days was based on degree days to compare with the 28 day strength of samples stored at 20 oC. A better procedure would have been to use maturity numbers (MT) instead of degree days, see SGI Report 30, j.m.f. section 3.1.2.
+To evaluate how both P-wave velocity and shear strength develop with time, reference samples were fabricated. The choice of the P-wave velocity in the laboratory tests is that it can also be measured on samples stored in sleeves. However, the length of the sleeves must be equal to the length of the sample. Otherwise, the resonance frequency of the sleeve is measured which biases the results. The reference samples consisted of a standard recipe consisting of 50\% OPC and 50\% QL. 
+
+The binder quantities were chosen corresponding to 80, 100 and 120 $kg/m^3$. After 7 days of curing, the P-wave velocity and shear strength were evaluated on the two samples from each binder quantity. This was repeated on days 14, 21, 28 and 80, respectively. This type of correlation has previously been used for the surface-stabilized specimens and indicated robust results \cite{ma15217798}. The choice of 80 days was based on degree days to compare with the 28 day strength of samples stored at 20\textdegree C. A better procedure would have been to use maturity numbers (MT) instead of the degree days.
 
 \subsection{Seismic CPT}
 
-The CPT probe is performed according to the standard SS-EN ISO 22476-1:2012. During a CPT probing, a cylindrical probe with a cross-sectional area of 1000 mm2 is driven where the probe has a tip angle of 60 degrees. The lowering takes place at a constant speed of 20 mm/s. At the probe tip, the force required to drive the probe down is measured. Through a backlash coupling, the casing friction is measured, which can thus be distinguished from the tip pressure. Furthermore, the pore pressure generated during the drive-down is measured via a filter system just behind the probe tip. Figure \ref{fig:06} shows the construction of a CPT probe.
+The Cone Penetration Testing (CPT) probe is performed according to the standard SS-EN ISO 22476-1:2012. During the CPT probing, a cylindrical probe with a cross-sectional area of $1000 mm^2$ is driven, where the probe has a tip angle of 60 \textdegree. The pushing of the instrumented cone into the ground was performed at a continuous rate of $2,0 cm/s$. During the CPT, the force required to drive the probe down was measured by mechanical measurements to evaluate the penetration resistance of soil to pushing a cone with a conical tip into the soil. The casing friction was measured through a backlash coupling, to distinguish it from the tip pressure. The pore pressure generated during the pushing was measured using a filter system located behind the probe tip, see Figure \ref{fig:06}.
 
 \begin{figure}[H]
 	\includegraphics[width=7cm]{Fig_06.jpg}

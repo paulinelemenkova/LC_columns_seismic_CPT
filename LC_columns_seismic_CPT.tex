@@ -6,6 +6,10 @@
 \usepackage{lipsum}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{array}
+\usepackage[flushleft]{threeparttable}
+\usepackage{booktabs}
+\usepackage{dcolumn}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{float}
@@ -337,19 +341,27 @@ Figure \ref{fig:14} shows the differences in evaluated strength between the samp
 The results from the CPT soundings are reported in in Figures \ref{fig:17}, \ref{fig:18}, \ref{fig:19}, \ref{fig:20}, \ref{fig:21} and \ref{fig:22}. In total, 7 different LC columns with a varying curing age between 9 days and 49 days were examined. The data for the investigated columns are summarised in \textcolor{red}{Table 1}.
 
 \begin{table*}[t]
-  \centering
-  \begin{tabular}{| c c c c c c c c c c c |}
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x \\
-    x & x & x & x & x & x & x & x & x & x & x 
-  \end{tabular}
+\begin{threeparttable}
   \caption{Compilation of data from probed columns.}
+  \centering
+  \footnotesize
+  \begin{tabular}{| c c c c c c c c c c c |}
+    Col. ID & Ok col. & R. uk col. & Stab. col. len. & Empty dril. & Aver. & Asc. & Date & LC/SC 50 kg & SCPT Date & Stab. Age \\
+    acs155 & x & x & x & x & x & x & x & x & x & x \\
+    acw151 & x & x & x & x & x & x & x & x & x & x \\
+    ada147 & x & x & x & x & x & x & x & x & x & x \\
+    adc148 & x & x & x & x & x & x & x & x & x & x \\
+    aea358 & x & x & x & x & x & x & x & x & x & x \\
+    aeg35 & x & x & x & x & x & x & x & x & x & x \\
+    aee356 & x & x & x & x & x & x & x & x & x & x
+  \end{tabular}
+
   \label{tab:1}
+   \begin{tablenotes}
+      \scriptsize
+      	\item \emph{Notations for Table 1.} Col. ID -- Column ID; Ok col. -- Ok column; R. uk col. -- Real uk column; Stab. col. len. -- Stabilized column length; Empty dril. -- Empty drilling (m); Aver. -- Average (Kg/m); Asc. -- Ascent (mm/rev); Date -- Date of fabrication; LC/SC 50 kg; SCPT Date; Stab. Age -- Stabilization age (curing period) in days.
+    \end{tablenotes}
+  \end{threeparttable}
 \end{table*}
 
 Since there are significant uncertainties related to the evaluation of shear strength of the stabilized soil based on the peak pressure or pore pressure evaluated from the CPT sounding, this report focused on comparing the standardized values between the peak pressure, \emph{qc} and standardized results from seismic measurements. The normalization was carried out by dividing the results by the largest value. Seismic measurements were recorded in the three lines, of which x- and y-lines represent shear wave measurements and z-line represent the compression wave measurements. The evaluations are reported in Figures \ref{fig:17}, \ref{fig:18}, \ref{fig:19}, \ref{fig:20}, \ref{fig:21} and \ref{fig:22}.  
@@ -442,27 +454,25 @@ The results show a large variation, and a very low tip resistance at the depth b
 
 However, the high peak pressure around the level of 3.5 m u.my is not achieved. The compression wave shows a better agreement with the peak pressure and the evaluated P-wave velocities, see Figure \ref{fig:16} for various columns. The P-wave velocity down to the level of 7 m is within the compression wave velocities measured in the laboratory, see Figure \ref{fig:17}(a) and Figure \ref{fig:13}(b). The values are, however, quite high, especially considering that the curing age of the pillar at the time of probing was only 26 days. 
 
-The measured shear wave speed for the columns is reported in Figures \ref{fig:17} to \ref{fig:22} for various directions. The graph shows the results from the evaluated shear wave excited from both right and left in x-direction, both signals and their means. The results show in general low shear wave velocities. \textcolor{red}{Table 2} shows P- and S-wave velocities for column acs155. The table also contains calculated shear strength values based on laboratory determined relationships.
-
- 105,27 115,52 122,65 125,87 135,54 158,2 194,82 200,14 276,78 274,35 383,49 488,08
-102,11 118,29 122,89 126,74 129,36 149,09 169,83 176,08 235,54 259,98 331,82 406,63
+The measured shear wave speed for the columns is reported in Figures \ref{fig:17} to \ref{fig:22} for various directions. The graph shows the results from the evaluated shear wave excited from both right and left in x-direction, both signals and their means. The results show in general low shear wave velocities. \textcolor{red}{Table 2} shows P- and S-wave velocities for column acs155. The table also contains calculated shear strength values based on laboratory determined relationships.   
+         
 \begin{table*}[t]
   \centering
   \begin{tabular}{| c c c c c c c |}                         
     Depth & P-wave & Ext. $c_u$ from P-wave & S-wave, x-dir. & S-wave y-dir. & S-wave mean & Ext. $c_u$ from S wave \\ \hline 
     (m) & (m/s) & (kPa) & (m/s) & (m/s) & (m/s) & (kPa) \\ \hline
-    2,25 & 852 & 406 & 98,94 & x & x & x \\
-    2,75 & 877 & 431 & 121,06 & x & x & x \\
-    3,25 & 739 & 303 & 123,13 & x & x & x \\
-    3,75 & 766 & 326 & 127,6 & x & x & x \\
-    4,25 & 785 & 343 & 123,17 & x & x & x \\
-    4,75 & 620 & 212 & 149,97 & x & x & x \\
-    5,25 & 507 & 140 & 144,83 & x & x & x \\
-    5,75 & 410 & 91 & 152,01 & x & x & x \\
-    6,25 & 284 & 43 & 194,3 & x & x & x \\
-    6,75 & 750 & 313 & 245,61 & x & x & x \\
-    7,25 & 1395 & 1115 & 280,15 & x & x & x \\
-    7,75 & 1427 & 1169 & 325,17 & x & x & x
+    2,25 & 852 & 406 & 98,94 & 105,27 & 102,11 & 15 \\
+    2,75 & 877 & 431 & 121,06 & 115,52 & 118,29 & 20 \\
+    3,25 & 739 & 303 & 123,13 & 122,65 & 122,89 & 22 \\
+    3,75 & 766 & 326 & 127,6 & 125,87 & 126,74 & 23 \\
+    4,25 & 785 & 343 & 123,17 & 135,54 & 129,36 & 24 \\
+    4,75 & 620 & 212 & 149,97 & 158,2 & 149,09 & 32 \\
+    5,25 & 507 & 140 & 144,83 & 194,82 & 169,83 & 41 \\
+    5,75 & 410 & 91 & 152,01 & 200,14 & 176,08 & 44 \\
+    6,25 & 284 & 43 & 194,3 & 276,78 & 235,54 & 77 \\
+    6,75 & 750 & 313 & 245,61 & 274,35 & 259,98 & 93 \\
+    7,25 & 1395 & 1115 & 280,15 & 383,49 & 331,82 & 149 \\
+    7,75 & 1427 & 1169 & 325,17 & 488,08 & 406,63 & 220
   \end{tabular}
   \caption{Table showing evaluated results from seismic CPT for column acs155.}
   \label{tab:2}

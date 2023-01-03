@@ -1,4 +1,4 @@
-\documentclass[final,3p,times,onecolumn]{elsarticle}
+\documentclass[final,3p,times,onecolumn,authoryear]{elsarticle}
 \usepackage{amssymb} % various useful mathematical symbols
 \usepackage{newunicodechar}
 \newunicodechar{ﬁ}{fi}
@@ -13,8 +13,9 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage[colorlinks = true,
-	breaklinks = true,
-	urlcolor = NavyBlue,
+	breaklinks = true, linkcolor=black, citecolor=blue, 
+%	urlcolor = NavyBlue,
+	urlcolor = black,
 	breaklinks = true]{hyperref}
 \usepackage{float}
 \usepackage{amsthm} % extended theorem environments
@@ -24,6 +25,7 @@
 \usepackage[version=4]{mhchem}
 \usepackage{gensymb}  % \textdegree
 \usepackage[super]{nth}
+\usepackage[]{natbib}
 
 \journal{Archives of Acoustics}
 
@@ -74,7 +76,7 @@ civil engineering \sep soil stabilization \sep compressive strength \sep cement 
 
 \subsection{Background}
 
-Stabilization of soil is a fundamental issue in civil engineering. Prior to construction works, weak soils should be stabilized using binders such as cement \cite{Bache,Chenetal2021,LindhLemenkova2022b}, lime \cite{Kichouetal,Chand}, slag \cite{LindhLemenkova2021a} or others \cite{Mirzababaei}. Compared to native soil, stabilized mixture exhibits increased improved properties such as increased strength, enhanced elastic modulus and stiffness \cite{Madhyannapuetal2010,SUNDARY2022103299}, improved liquefaction resistance \cite{ITO199433}, reduced porosity, permeability and shrinkage \cite{TONINIDEARAUJO2023129757,Nagih,Ahnberg2003}, decreased swell potential in soils prone to freeze-thaw cycles \cite{ShihataBaghdadi,BinShafique,Orakoglu}, increased resistance against the impacts from moisture and temperature \cite{Zhangetal2020,Kimetal2012}. Such improved properties make soil suitable to earthworks and ensure the safety of constructions and civil infrastructure systems (roads, communications, tunnels, highways). This especially concerns the high plasticity expansive clay soils of Sweden. Existing methods of soil stabilization can be divided into two broad categories: traditional methods of soil stabilization and evaluation of strength \cite{Trhl,LindhLemenkova2022a,Heidarizadeh} and advanced seismic methods using non-destructive techniques of acoustical soundings \cite{Varma,Foti,LindhLemenkova2021b,GarciaSuarez}. The traditional methods of evaluation of stabilized soil improvements using uniaxial \cite{Avci,Lapointe,XuYi} or triaxial \cite{ALVARADO} tests and laboratory equipment are robust and widely applied approaches of soil evaluation. However, they have certain limitations and disadvantages. First, these methods are destructive, i.e., the tested specimens are crashed after the experiments. Besides, these tests are not applicable to conduct on fissured clay. Moreover, the Uniaxial Compressive Strength (UCS) may be not precise for soils with the angle of shearing resistance not equal to zero where shear strength is not equal to half the compressive strength. On that basis, the use of the applied methods of data analysis based on mathematical modelling \cite{Jefferies} and image analysis \cite{Kallenetal2014,Kallenetal2016} is applicable for evaluation of soil characteristics.
+Stabilization of soil is a fundamental issue in civil engineering. Prior to construction works, weak soils should be stabilized using binders such as cement \citep{Bache,Chenetal2021,LindhLemenkova2022b}, lime \citep{Kichouetal,Chand}, slag \citep{LindhLemenkova2021a} or others \citep{Mirzababaei}. Compared to native soil, stabilized mixture exhibits increased improved properties such as increased strength, enhanced elastic modulus and stiffness \citep{Madhyannapuetal2010,SUNDARY2022103299}, improved liquefaction resistance \citep{ITO199433}, reduced porosity, permeability and shrinkage \cite{TONINIDEARAUJO2023129757,Nagih,Ahnberg2003}, decreased swell potential in soils prone to freeze-thaw cycles \citep{ShihataBaghdadi,BinShafique,Orakoglu}, increased resistance against the impacts from moisture and temperature \citep{Zhangetal2020,Kimetal2012}. Such improved properties make soil suitable to earthworks and ensure the safety of constructions and civil infrastructure systems (roads, communications, tunnels, highways). This especially concerns the high plasticity expansive clay soils of Sweden. Existing methods of soil stabilization can be divided into two broad categories: traditional methods of soil stabilization and evaluation of strength \citep{Trhl,LindhLemenkova2022a,Heidarizadeh} and advanced seismic methods using non-destructive techniques of acoustical soundings \citep{Varma,Foti,LindhLemenkova2021b,GarciaSuarez}. The traditional methods of evaluation of stabilized soil improvements using uniaxial \citep{Avci,Lapointe,XuYi} or triaxial \citep{ALVARADO} tests and laboratory equipment are robust and widely applied approaches of soil evaluation. However, they have certain limitations and disadvantages. First, these methods are destructive, i.e., the tested specimens are crashed after the experiments. Besides, these tests are not applicable to conduct on fissured clay. Moreover, the Uniaxial Compressive Strength (UCS) may be not precise for soils with the angle of shearing resistance not equal to zero where shear strength is not equal to half the compressive strength. On that basis, the use of the applied methods of data analysis based on mathematical modelling \citep{Jefferies} and image analysis \citep{Kallenetal2014,Kallenetal2016} is applicable for evaluation of soil characteristics.
 
 The applied geophysical methods have been widely used in the context of seismic and acoustical tests. These are based on the evaluation of the velocities of P and S waves penetrating the soil \cite{Safaee,LindhLemenkova2022c,FotiLancellotta}. Other examples include Rayleigh-Ritz method which evaluates the free vibration characteristics in the ground \cite{SonkarMittal,Jones} or attenuation of waves through the evaluation of vibration over time \cite{Colombero}. Several experimental papers were published on application of wave velocity for evaluation soil parameters. Among these, \cite{Santamarina} reports on the existing relationship between wave propagation and the inherent properties of the materials, such as fabric, mineralogical structure, surface roughness, size of particles and angularity, which control soil strength and stiffness.
 
@@ -502,7 +504,7 @@ However, the high peak pressure around the level of 3.5 m u.my is not achieved. 
 
 Measured shear wave speed for the columns is reported in Figures \ref{fig:17} to \ref{fig:22} for various directions. The graph shows the results from the evaluated shear wave excited from both right and left in x-direction, both signals and their means. The results show in general low shear wave velocities. Table \ref{tab:2} shows P- and S-wave velocities for column ACS155. The table also contains calculated shear strength values based on laboratory determined relationships.   
          
-It is clear that the evaluated strength from the P-wave measurement are relatively high with values above the actual strength, while strength evaluated from the S-wave measurements are clearly below the expected strength values. Down to a depth of 6 meters, the evaluated strength values are only slightly above the initial strength values of natural clay. Figure \ref{fig:15} shows the probing result from various columns. These results in column acs155 (Figure \ref{fig:15} (a)) indicate a significant difference compared to a probing in natural clay, cf. Figure \ref{fig:15} (f) in column AEE356. The results from the probing of column ACS155 indicate that based on the seismic CPT sounding, the soil has been reinforced with a very solid part around 3.5 m below the ground surface.
+It is clear that the evaluated strength from the P-wave measurement are relatively high with values above the actual strength, while strength evaluated from the S-wave measurements are clearly below the expected strength values. Down to a depth of 6 meters, the evaluated strength values are only slightly above the initial strength values of natural clay. Figure \ref{fig:15} shows the probing result from various columns. These results in column ACS155 (Figure \ref{fig:15} (a)) indicate a significant difference compared to a probing in natural clay, cf. Figure \ref{fig:15} (f) in column AEE356. The results from the probing of column ACS155 indicate that based on the seismic CPT sounding, the soil has been reinforced with a very solid part around 3.5 m below the ground surface.
 
 The evaluated CPT sounding for pillar ACW151 is reported in Figure \ref{fig:15} (b). The peak pressure varies from below 0.5 MPa to above 4 MPa. This may appear to be low for a column that was cured during 28 days at the time of probing. For column ACW151, the standardized values between peak pressure, P- and S-wave show poor agreement, see Figure \ref{fig:16} (b). The evaluated S-wave here gives a fairly good agreement between the x- and y-directions, but does not follow the results from the peak pressure. The highest evaluated P-wave velocity is almost 5000 m/s, which is in parity with the velocities in steel columns.
 
@@ -531,7 +533,7 @@ Seismic CPT has many advantages over the traditional CPT. To ensure that the CPT
 Another important parameter for seismic CPT is the financial costs of the works and technical equipment. Here, both a drilling rig and special expensive equipment are required, as well as the fact that the method is currently quite time-consuming and financially costly. By using a better signal source in seismic methods, some of the disadvantages of the methods can be eliminated. Therefore, this methodology can be a way to evaluate the effects of LC columns but cannot compete in terms of cost with the limestone column probes.
 
 \section{Acknowledgements}
-We are grateful to Helen Åhnberg and Rolf Larsson for project idea development, Roger Wisén (Ramböll) and Nils Rydén (LTH/Peab) for their support with data modelling and simulations, and Torbjörn Edstam, Skanska for the review and valuable comments. We thank the anonymous reviewers who provided careful reading and constructive commenting of this work. 
+We are grateful to Helen Åhnberg and Rolf Larsson for project idea development, Roger Wisén (Ramböll) and Prof. Dr. Nils Rydén (LTH/Peab) for their support with data modelling and simulations, and Torbjörn Edstam, Skanska for the review and valuable comments. We thank the anonymous reviewers who provided careful reading and constructive commenting of this work. 
 
 \section{Funding}
 The Port of Stockholm, NCC and Geomind are acknowledged for assistance with data collection and support with the surveys. The Swedish Transport Administration, Skanska Group AB and the Development Fund of the Swedish Construction Industry (SBUF) provided financial contribution to this project. The authors express gratitude to Cemex AB and Swedish Maritime Administration (SMA) for provided adhesives and support of the project. Polina Lemenkova was supported by The Federal Public Planning Service Science Policy or Belgian Science Policy Office, Federal Science Policy - BELSPO (B2/202/P2/SEISMOSTORM).
@@ -866,7 +868,9 @@ The Port of Stockholm, NCC and Geomind are acknowledged for assistance with data
 
 \newpage
 %\bibliographystyle{elsarticle-num} 
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
+\bibliographystyle{elsarticle-harv}
+%\bibliographystyle{apalike}
 \bibliography{References_AA.bib}
 %\nocite*{}
 

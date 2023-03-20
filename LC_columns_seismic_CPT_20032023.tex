@@ -1,0 +1,668 @@
+\documentclass[final,3p,times,onecolumn,authoryear]{elsarticle}
+\usepackage{amssymb} % various useful mathematical symbols
+\usepackage{newunicodechar}
+\newunicodechar{ﬁ}{fi}
+\newunicodechar{ﬀ}{ff}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage[flushleft]{threeparttable}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[hidelinks,
+	colorlinks=false,
+%	breaklinks=true, 
+	linkcolor=black, 
+	citecolor=black, 
+	urlcolor=black,
+	allcolors=black,
+	breaklinks = true]{hyperref}
+\usepackage{float}
+\usepackage{amsthm} % extended theorem environments
+\usepackage{lineno} % line numbers
+\graphicspath{{figures/}} % path to folder with figures
+\usepackage{chemformula}
+\usepackage[version=4]{mhchem}
+\usepackage{gensymb}  % \textdegree
+\usepackage[super]{nth}
+\usepackage[]{natbib}
+\usepackage{soul}
+
+\journal{Archives of Acoustics}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{\textbf{Ultrasonic P- and S-Wave Reflection and CPT Soundings for Measuring Shear Strength in Soil Stabilized by Deep \textcolor{blue}{Lime/Cement} Columns in Stockholm Norvik Port}}
+
+\author[label1,label2]{Per LINDH}
+
+\affiliation[label1]{organization={Swedish Transport Administration, Department of Investments, Technology and Environment. E-mail: per.lindh@trafikverket.se},
+             addressline={Neptunigatan 52, P.O. Box 366},
+             city={Malmö},
+             postcode={SE-201-23},
+	country={Sweden}}
+\affiliation[label2]{organization={Lund University, Lunds Tekniska Högskola LTH (Faculty of Engineering), Department of Building and Environmental Technology, Division of Building Materials. E-mail: per.lindh@byggtek.lth.se},
+             addressline={Box 118},
+             city={Lund},
+             postcode={SE-221-00},
+             country={Sweden}}
+
+\author[label3]{Polina LEMENKOVA}
+\affiliation[label3]{organization={Université Libre de Bruxelles (ULB), École polytechnique de Bruxelles (EPB, Brussels Faculty of Engineering), Laboratory of Image Synthesis and Analysis (LISA). E-mail: polina.lemenkova@ulb.be},
+             addressline={Campus de Solbosch, ULB -- LISA CP165/57, Avenue Franklin D. Roosevelt 50},
+             city={Brussels},
+             postcode={B-1050},
+             country={Belgium}}
+
+\begin{abstract} In this \hl{research }project, \hl{the }measurements of \hl{the }ultrasonic P- and S-waves and seismic Cone Penetration Testing (CPT) \hl{were applied} to identify subsurface conditions and properties of clayey soil stabilized with \hl{lime/cement} columns in \hl{the }Stockholm Norvik Port, Sweden. \hl{Applied} geophysical methods \hl{enabled to identify} a connection between \hl{the }resistance of soil and strength in the stabilized columns. The records of \hl{the }seismic tests were obtained in the laboratory of Swedish Geotechnical Institute (SGI) through estimated\hl{ }P- and S-wave velocities using \hl{techniques} of resonance frequency measurement of the stabilized\hl{ }specimens. The CPT profiles were used to evaluate the quality of the \hl{lime/cement} columns of the reinforced soil by \hl{the }interpretation of signals. The relationship between the P and S waves demonstrated \hl{a} gain in strength during \hl{soil hardening}. \hl{The} quality of soil \hl{was evaluated by seismic measurements with aim }to achieve sufficient strength of foundations prior to \hl{the }construction of \hl{the }infrastructure objects \hl{and industrial works. Seismic} CPT is an effective method essential to evaluate the correct placement of the CPT inside the column. This work demonstrated the\hl{ }alternative seismic methods supporting \hl{the }up-hole technology of drilling techniques for practical purpose in civil\hl{ }engineering \hl{and geotechnical works}. 
+\end{abstract}
+
+\begin{keyword}
+
+civil engineering \sep soil stabilization \sep compressive strength \sep cement \sep lime \sep seismic waves
+
+\PACS 81.40.Cd \sep 81.40.Ef \sep 62.20.Qp \sep 83.50.Xa \sep 45.70.Mg \sep 92.40.Lg \sep 81.40.Lm \sep 62.20.M-
+\MSC 76Axx \sep 74Exx \sep 74Fxx
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
+\linenumbers
+\section{Introduction}
+
+\subsection{Background}
+
+Stabilization of soil is a fundamental issue in civil engineering. Prior to \hl{engineering and }construction works, weak soils should be stabilized using binders such as cement \citep{Bache,Chenetal2021,LindhLemenkova2022b}, lime \citep{Kichouetal,Chand}, slag \citep{LindhLemenkova2021a} or others \citep{Mirzababaei}. Compared to native soil, stabilized mixture exhibits\hl{ the improved} properties such as increased strength, enhanced elastic modulus and stiffness \citep{Madhyannapuetal2010,SUNDARY2022103299}, improved liquefaction resistance \citep{ITO199433}\hl{. Other advantages include the }reduced porosity, permeability and shrinkage \citep{TONINIDEARAUJO2023129757,Nagih,Ahnberg2003}, decreased swell potential in soils prone to freeze-thaw cycles \citep{ShihataBaghdadi,BinShafique,Orakoglu}, increased resistance against the impacts from moisture and temperature \citep{Zhangetal2020,Kimetal2012}. Such improved properties make soil suitable to earthworks and ensure the safety of constructions and civil infrastructure systems (roads, communications, tunnels, highways). This especially concerns the high plasticity expansive clay soils of Sweden. 
+
+Existing methods of soil stabilization can be divided into two broad categories: traditional methods of soil stabilization and evaluation of strength \citep{Trhl,LindhLemenkova2022a,Heidarizadeh} and advanced seismic methods using non-destructive techniques of acoustical soundings \citep{Varma,Foti,LindhLemenkova2021b,GarciaSuarez}. The traditional methods of evaluation of \hl{the improvements in the }stabilized soil \hl{include the} uniaxial \citep{Avci,Lapointe,XuYi} or triaxial \citep{ALVARADO} tests \hl{using} laboratory equipment \hl{which }are robust and widely applied approaches\hl{. }However, they have certain limitations and disadvantages. First, these methods are destructive, i.e.,\hl{ }tested specimens are crashed after the experiments. \hl{Second}, these tests are not applicable to conduct on \hl{the }fissured clay. Moreover, the Uniaxial Compressive Strength (UCS) may be not precise for soils with the angle of shearing resistance not equal to zero where shear strength is not equal to half the compressive strength. On that basis, the use of the applied methods of data analysis based on mathematical modelling \citep{Jefferies}\hl{ is better} applicable for evaluation of soil characteristics.
+
+The applied geophysical methods have been widely used in the context of seismic and acoustical tests. These are based on the evaluation of the velocities of P and S waves penetrating the soil \citep{Safaee,LindhLemenkova2022c,FotiLancellotta}. Other examples include \hl{the }Rayleigh-Ritz method which evaluates the free vibration characteristics in the ground \citep{SonkarMittal,Jones} or attenuation of waves through the evaluation of vibration over time \citep{Colombero}. Several experimental papers were published on application of wave velocity for evaluation \hl{of }soil parameters. Among these, \cite{Santamarina} reports on the existing relationship between \hl{the }wave propagation and the inherent properties of the materials, such as fabric, mineralogical structure, surface roughness, size of particles and angularity, which control soil strength and stiffness.
+
+Ultrasonic and bender element tests used to measure \hl{the }elastic modulus and \hl{evaluate }the rigidity of soil as shear modulus from compression waves are reported in \cite{Amaral} with a case of sand samples stabilized by cement. The use of \hl{the }free-free resonant column tests in combination with \hl{the }UCS tests has also proved to be applicable to the sand-cement mixtures for measurement of the electrical resistivity and mechanical properties of \hl{the }stabilized soil \citep{Rusati}. Other examples in this category include measuring shear wave velocity during \hl{the }penetration testing \citep{Hepton1989}, and determining the dynamic shear modulus of the ground, independent of \hl{the }Poisson's ratio \citep{Abbiss}. 
+
+Cone Penetration Testing (CPT) is an effective method of soil investigation and identification \hl{of the }subsurface conditions. Originally developed in the Netherlands in the 1930s and initially named as the 'Dutch cone test' \citep{brouwer2007situ,mccallum_2014}, it has nowadays numerous applications in geotechnical engineering, such as prediction of liquefaction resistance \citep{Olsen,Fitzgerald,Saye}, evaluation of strength \citep{Priceetal2016,Jamiolkowski}, and measuring excess pore pressure \citep{SullyCampanella,Elsworthetal2006}. Nowadays, CPT is one of the most used methods for measurements of \hl{the }geotechnical properties of soil. For instance, the applications of CPT for estimation of deformation modulus of soil \citep{SHAHIEN2013633,BENZNAVARRETE2022289} and \hl{characterising} soil liquefaction potential by \cite{GUAN20221221} are worth mentioning. \hl{The }related methods include\hl{, for instance,} estimating \hl{the }cone penetration resistance for analysis of \hl{the }soil compressibility \citep{Bishtetal2021}, 
+
+The Deep Soil Mixing (DSM) method is an \emph{in situ} stabilization of soil in which soil is mixed with binders, typically cementitious materials, lime, slag or similar stabilizing agents. Over the last decades, there has been a rise in research into \hl{the }DSM methods, as a response to the appearance of novel construction practices and equipment in addition to \hl{the }existing general techniques of drilling in cored boreholes \citep{Hepton}. These are the techniques of stabilizing \hl{the }unsaturated expansive subsoils \hl{at the} moderate active depths \citep{MadhyannapuPuppala,Madhyannapu}, \hl{or }settlement control in highway embankment \citep{Archeewa}. \hl{The }cases of the reinforced embankments supported by \hl{the }DSM cement columns are presented by \cite{Lambrechts} for stability and the settlement control, \cite{Bergado}
+with computed permeability and compressibility ratio and the consolidation of the columns and clay, and \cite{Yapageetal2014} with \hl{evaluated} settlements, excess pore-water pressures and lateral deformations in \hl{a }strain-softening behavior of \hl{the }deep cement columns.
+
+Cohesive soil with high moisture content and fine-grained structure, such as clays, silts or loams, are best stabilized by lime and cementitious binders. As a result, soil has enhanced parameters which result in the increased strength, reduced permeability and compressibility. However, the engineering properties of soil stabilized by the DSM method depend on various factors including the following \hl{ones}: the original characteristics of the native soil, \hl{the }types and \hl{the }amount of binders, technical and operational parameters defined by \hl{the }construction types, curing time, depth, external parameters such as temperature and moisture\hl{, }and loading conditions.
+
+In this paper, we propose a framework of novel applications of \hl{the }DSM and seismic methods to address the problem of \hl{the }evaluation of strength of the expansive clay stabilized with lime/cement\hl{ }columns. The methodology includes the \emph{in-situ} fieldwork and laboratory based measurements and modelling. The CPT soundings were performed in the area of Stockholm Norvik Port. The resistance and strength of soil in the stabilized columns was evaluated by seismic tests. A method of resonant frequency measurements of \hl{the }compressional wave velocities was embedded into these tests. We applied the alternative seismic methods supporting \hl{the }up-hole technology of \hl{the }drilling techniques. This enabled to evaluate the pressure by \hl{the }S- and \hl{P-waves} for \hl{lime/cement} columns. We report the results of \hl{seven} columns with performed CPT probing (ACS155, ACW151, ADA147, ADC148, AEG35, AEE356 and AEA358). We evaluated the relationship between the P- and S-waves which shown \hl{the }gain in strength.
+
+\begin{figure*}[h!]
+ \centering
+    \includegraphics[width=0.80\textwidth]{Fig_01.jpg}
+  \caption{A process of CPT sounding in Norvik area. Photo source: Per Lindh.}\label{fig01}
+\end{figure*}
+
+\subsection{Objectives and goals}
+The background to the project is the need to \hl{correctly} evaluate the quality of \hl{the lime/cement} columns in terms of strength and homogeneity in the region of Stockholm Norvik Port -- a new deep sea port of Sweden in the Baltic Sea. Norvik consisted of a bay until the beginning of the 1980s, surrounded by a hilly strip of land and a mountainous island. Nowadays, this area is largely reconstructed for \hl{the }container terminal of Stockholm Norvik Port. The Stockholm Norvik Port is an important port transporting cargo in the capital with a direct connection to other regions of Sweden in the Baltic Sea and northern Europe. The sustainable and efficient operation of the infrastructure in the port modalities requires safe constructions on the stabilized ground. Therefore, the objectives of this work are to determine the strength properties of soil stabilized by \hl{lime/cement} columns using \hl{the }CPT. The CPT was evaluated as a test method for the stabilization of soil prior to construction works. The practical goal of this work is to connect the laboratory \hl{tests} and field measurements to obtain a better and safer optimization of \hl{the }binders \hl{in terms of} types \hl{and proportions }for soil stabilization. In the response to these needs, the aim is to evaluate seismic methods for evaluating the strength of the soil, stabilized by various binders. 
+
+%\newpage
+\section{Methods}
+
+\subsection{Fieldwork}
+In this project, the field investigations were carried out during the period of 7--10 November 2016 in Norvik. The technical equipment included \hl{the }multipurpose drilling rig GEORIG -- Model 607 used for soundings. The GEORIG -- 607, developed by Geotech AG, was selected as a proper instrument for drilling, since it is equipped with \hl{all }the necessary devices for soil rock drilling, Swedish weight sounding, dynamic sounding, Standard Penetration Test (SPT) \hl{and }CPT. The GEORIG 607 was anchored with a screw to achieve the sufficient holding force, Figure \ref{fig01}. 
+
+\begin{figure*}[h!]
+ \centering
+    \includegraphics[width=0.90\textwidth]{Fig_02.jpg}
+  \caption{Variations in water ratio, yield strength and density in natural clay over depth}\label{fig02}
+\end{figure*}
+
+During the construction of a gas storage facility in Nyn\"ashamn, the bay was filled with the explosives from the construction. The filling was carried out by the tipping masses from several fronts, which meant that the large volumes of clay were enclosed in the blast-stone filling. The two large areas, northern and southern ones, were identified and used as study areas, filled with \hl{clay} up to 30 m. Previously, \hl{several} geotechnical field investigations in this area \hl{were} carried out in 1982, 2008, 2010 and 2011 with\hl{ }technical details \hl{reported} clay properties and stabilization \citep{Geomind2015}. The requirements for the \hl{lime/cement} columns in this project were set on \hl{the }achieving \hl{of }a minimum \emph{in situ} shear strength of 150 kPa after 28 days of curing period. To ensure this, the requirement for the laboratory packed samples is set to at least 200 kPa. Several mixtures of the stabilized soil that contained cement, quicklime and \hl{the Lime Kiln Dust (LKD)} met the requirements of at least 200 kPa after 28 days of storage. Since the \emph{in situ} temperature in the columns is partly dependent on the type and the amount of binder, the laboratory tests \hl{differed} from the \hl{fieldwork} results, especially when the laboratory cured samples were stored at 7\textdegree C in a climate room where the cooling is significantly greater than in an \emph{in situ} conditions. 
+
+\subsection{Laboratory Tests}
+
+\subsubsection{Test chamber}
+
+Prior to \hl{the laboratory }tests, the test chamber was well examined and documented\hl{ }in terms of \hl{technical conditions for natural soil collected in the Stockholm Norvik port.} The laboratory measurements on \hl{the }stabilized soil were carried out using seismic tests of P-wave and flexwave (shear wave) \hl{velocities that evaluated the strength of the }stabilized samples. \hl{Seismic tests} were carried out\hl{ }as a reference to the measurements in the field. 
+
+\subsubsection{Determination of the material parameters}
+The soil stabilized in this project included natural clay with\hl{ }parameters reported in Figure \ref{fig02} and Figure \ref{fig03}. The overall density values vary in the range of \hl{1.40} to \hl{2.00} t/m\textsuperscript{3} in the depth up to 25 m \hl{(Figure }\ref{fig02}\hl{, right)}. \hl{The values of both }the \hl{natural }water ratio \hl{($W_N$)} of soil\hl{ }and the yield strength \hl{($W_L$) vary} from 40 to 100\% \hl{(Figure }\ref{fig02}). The density mostly varies between 1.5 to 1.7 tons per m\textsuperscript{3}. The corrected shear strength, $c_u , korr$, is mainly between 5 and 15 kPa and the clay is low to medium, in terms of sensitivity. 
+
+\begin{figure*}[h!]
+ \centering
+    \includegraphics[width=0.90\textwidth]{Fig_03.jpg}
+  \caption{Shear strength and sensitivity changed over depth for the large clay area}\label{fig03}
+\end{figure*}
+
+\subsubsection{Binders}
+
+Three different binders were used in this study: 1) Ordinary Portland Cement (OPC) of type CEM II/A; 2) burnt lime, or quick lime (QL); 3) \hl{LKD}. These binders were selected due to their effectiveness and applicability, as tested in previous studies \citep{LindhLemenkova2022CEE}. \hl{Using these} three \hl{general types of }binders, nine \hl{combinations of the blended mixes were fabricated and} tested. The mixing quantities corresponded to 80, 100 and 120 kg of binder per m\textsuperscript{3} of clay. To evaluate binder combinations for stabilization using deep mixing method, \hl{the} experimental setup using simplex centroid design was used following the existing methodology \citep{electronics11223726}. Hence, various percentage of the three binders was tested in an experiment which consists of a triangle with pure binders in the corners and a mixture of two binders along the triangle's stripes. 
+
+A combination of all the three binders was tested experimentally inside the triangle with a total binder content as a constant. The trial surface in a three-factor simplex centroid is structured as a triangle with the corners of the triangle representing 100\% of one binder and the \hl{centre} of the triangle corresponds to 33\% of the three different binders. The mutual ratio between the binders varies depending on where in the triangle the test point is located. \hl{These} tests were carried out according to the laboratory quality handbook of the Swedish Geotechnical Institute (SGI), document 29a, rev c. Each trial point was performed as a double trial. The points on the lower edge of the triangle correspond to either a pure binder\hl{ }(cf. \hl{CEM II/A} or \hl{QL})\hl{, or, }alternatively\hl{, as} a mixture of 50\% \hl{CEM II/A} and 50\% \hl{QL}. Testing the proportions and the amount of binders was carried out on clay collected from the test excavation sites carried out at Norvik. 
+
+The curing times for the samples was determined as 7, 14, 21 and 28 days with measurements of strength performed on the reference days. Some extra specimens were evaluated on the \nth{80} day of curing. \hl{In addition, }extra reference tests were carried out \hl{ }for calibration of seismic \hl{measurements} in relation to \hl{the }compressive strength at 7 and 14 days.The experimental setup was performed as a three\hl{ }factor simplex centroid with a restriction limitation of the LKD content which was \hl{increased up} to 50\%. The purpose of the statistical trial planning is to \hl{minimise} the number of trials in view of the large amount of materials that should be tested in real conditions (dozens tons of soil) and to \hl{statistically optimise} the binder blends. At the same time, the experimental planning maintains the statistical significance and ensures that both positive and negative interactions between the binder components are detected. 
+
+\subsection{Seismic tests}
+
+Natural resonance frequency ($f_n$)\hl{ }is the number of oscillations per second (Hz) in a test body that is allowed to oscillate and swing freely without damping. The lowest resonant frequency is called the fundamental mode\hl{. }All natural resonance frequencies can be physically related to the elastic constants, E-modulus (E) and transverse contraction number or seismic velocities such as primary wave (P-wave) and secondary wave (S-wave or shear wave). For specimens with a length twice the diameter ($L/D\geq2$), the one-dimensional (1D) wave propagation velocity was calculated using \hl{the }Equation \ref{eq:01}:
+
+\begin{equation}\label{eq:01}
+	V_{P1D} =2Lf_d
+\end{equation}
+
+where $f_d$ is a damped resonance frequency. 
+
+Seismic measurements were performed as a resonance frequency measurement of P-wave and S-wave, Figure \ref{fig04}. The advantage of the P-wave measurements is that these can be carried out on the specimens while they harden in the sleeve \hl{so that} the sleeve \hl{does not significantly affect }the measurements. The disadvantage of measuring the P-wave is that it is strongly affected when soil \hl{becomes }saturated with water, when Sr goes towards one. When soil is saturated with water, \hl{the measurement of P-wave velocity} of soil sample \hl{is affected by the included water for which} P-wave velocity\hl{ }is about 1500 m/s. \hl{Necessarily, }this may lead to the incorrect \hl{and biased }results. However, this bias is not significant in the laboratory-made specimens, because these cannot be saturated with water without \hl{a} very high pressure\hl{.} 
+
+Measuring\hl{ }shear wave instead enables to solve \hl{this }problem in cases when it is not affected by high water saturation levels. However, the measurement of the true shear wave is more difficult with a free-free resonant column setup. A common\hl{ }way to evaluate shear wave, although not entirely accurate, is to measure the bending mode, i.e., flex mode or transverse mode \citep{VERASTEGUIFLORES2015943}. According to this approach, shear wave velocity is underestimated by \hl{approximately} 5\% for a specimen with a slenderness factor of 2 (\hl{where }slenderness is a ratio of length/diameter) and a = 0.2. The setup for measuring \hl{the }flex mode is shown in Figure \ref{fig04}.
+
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_04a.jpg}
+		\caption{}
+	\end{subfigure} \\ \vfill
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_04b.jpg}
+		\caption{}
+	\end{subfigure}
+	\caption{Setup of test measurements. (a): P-wave frequency of a sample body by a free-resonance column approach; (b): flex wave frequency (ff) of a sample body using a free resonance frequency of column.}
+\label{fig04}
+\end{figure}
+
+The evaluation of the shear wave velocity is calculated according to Equation \ref{eq:02}\hl{:} 
+
+\begin{equation}\label{eq:02}
+	V_s = 2Lf_f
+\end{equation}
+
+To measure true hear waves in \hl{a} laboratory, \hl{it is necessary} to use bending elements\hl{. However, }this methodology is cumbersome and \hl{requires} a long time. To \hl{solve this problem}, a new methodology has been tried at \hl{the }SGI to evaluate the torsional mode \hl{aimed at a} better \hl{calculation of the} shear wave, Figure \ref{fig05}. However, this \hl{approach} is not yet sufficiently tested and \hl{should} be verified with more measurements and analysis using \hl{the Finite Element Method (FEM)} to check that the correct mode is evaluated. 
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_05.jpg}
+	\caption{A sketch of the experimental setup for measuring torsion mode according to the free-free resonance column principle.}
+\label{fig05}
+\end{figure}
+
+To evaluate how both P-wave velocity and shear strength develop with time, reference \hl{soil }samples were fabricated. The reference samples consisted of a standard recipe consisting of 50\% OPC and 50\% QL. The \hl{advantage} of the \hl{use of }P-wave velocity in the laboratory tests is that it can also be measured on \hl{soil specimens} stored in sleeves. However, \hl{in such case, }the length of the sleeves must be equal to the length of the sample. Otherwise, the resonance frequency of the sleeve is measured \hl{additionally, }which biases the results. The binder quantities were chosen corresponding to 80, 100 and 120 kg/m\textsuperscript{3}. After 7 days of curing, the P-wave velocity and shear strength were evaluated on the two samples \hl{with} each binder quantity. This was repeated on days 14, 21, 28 and 80, respectively. This type of correlation has previously been used for the surface-stabilized specimens and indicated robust results \citep{ma15217798}. The choice of 80 days was based on \hl{the }degree days to compare with the 28 day strength of samples stored at 20\textdegree C. A better procedure would have been to use maturity numbers \hl{($M_T$)} instead of the degree days.
+
+\subsection{Seismic CPT}
+
+The \hl{CPT} probe is performed according to the standard SS-EN ISO 22476-1:2012 for subsurface exploration. The reason for using seismic CPT is that \hl{in this method, a peak pressure and} both seismic \hl{values} obtained \hl{from the} P-wave (compression wave) \hl{and} S-wave (shear wave) \hl{are evaluated}. During the CPT probing, a cylindrical probe with a cross-sectional area of 1000 mm\textsuperscript{2} is driven, where the probe has a tip angle of \hl{60\textdegree .} The pushing of the instrumented cone into the ground was performed at a continuous rate of \hl{2.0} cm/s. During the CPT, the force required to drive the probe down was measured by \hl{the }mechanical measurements to evaluate the penetration resistance of soil \hl{when} pushing a cone with a conical tip into the soil. The casing friction was measured through a backlash coupling, to distinguish it from the tip pressure. The pore pressure generated during the pushing was measured using a filter system located behind the probe tip, and the friction force gauge was used to measure the friction ratio between \hl{the }sleeve friction and \hl{the }tip resistance, which \hl{was }measured as a percentage, see the scheme in Figure \ref{fig06}.
+
+\begin{figure}[H]
+	\includegraphics[width=9cm]{Fig_06.jpg}
+	\caption{Schematic diagram of the composition of a CPT probe. Modified after: SGI Information 15.}
+\label{fig06}
+\end{figure}
+
+During \hl{the tests}, the tip resistance (MPa) is recorded as a force required to push the tip of the cone through soil. It is determined as the force per unit area obtained by dividing the measured force by the cross-sectional area of the tip. This peak pressure is denoted as \hl{$q_c$} if the pore pressure is not taken into account and \hl{$q_t$} if the value is corrected taking into account error sources from the effects of the soil pores. In \hl{a} special case, when $u \approx 0$ or is negligible, \hl{$q_c$} becomes \emph{$q_t$}. The CPT probe is reported and registered in standard protocols using Conrad software, as shown in Figure \ref{fig16}. The sounding was carried out following the traditional methods of the CPT sounding. The specifics of \hl{the} fieldwork is that at the depth where seismic measurements were carried out, the CPT sounding was paused, while the P- and S-wave measurements started. 
+
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_07a.jpg}
+		\caption{CPT probe with dual accelerometers.}
+	\end{subfigure} \\ \vfill
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_07b.jpg}
+		\caption{CPT probe with one accelerometer.}
+	\end{subfigure}
+	\caption{Schematic diagram of a seismic CPT probe}
+\label{fig07}
+\end{figure}
+
+The measurements \hl{used} a sledgehammer which was connected with an earth cable to the measuring equipment to generate shear and compression waves. \hl{At the start of seismic measurements}, \hl{the }problems arose with the signal, which could be traced\hl{ }to motor vibrations and transmission between the drill chuck and drill steel. This was resolved by releasing the drill chuck and shutting down the motor of the drill track carriage\hl{. }The CPT soundings were not performed at the centre of the columns, to avoid \hl{the }disturbances at the centre arising from the column installation itself. 
+
+Seismic CPT included \hl{the }measurements of shear and compression waves, in addition to the regular CPT \hl{soundings}. The measurements were performed using a series-connected device that was placed between the CPT probe and the probing rods. The measurements were performed by stopping the CPT probe at the required level of 25 \hl{m. Alternatively, }the systems with continuous \hl{measurements} can \hl{also} be used\hl{. In such cases, measurements }should be be stopped after splicing the bars.
+
+There are two different principles of \hl{seismic }measurements.
+
+The first principle is based on the two rounds of accelerometers (A1 and A2) with a fixed distance between them, Figure \ref{fig07} (a). The accelerometers measure the x-, y- and z-directions, where y-direction identifies the pitch. This principle calculates the penetration speed based on the time measurement between the first wave propagation to accelerometers 1 and 2. Therefore, this method is sometimes referred to as “true-time”, since the fixed distance between the accelerometers provides a safer determination of the time difference and thus a precise determination of the ground running speed, Figure \ref{fig07} (a). 
+As the distance between the accelerometers is constant, the speed can be calculated directly.
+
+The second principle is based on carrying out the measurements with only one set of \hl{the }accelerometers with registration in three directions (x, y and z). The measurement is first performed at one level, after which the CPT probing continues and a new measurement is performed at the next level, Figure \ref{fig07} (b). In this case, the accelerometer measures \hl{signals }in the x-, y- and z-direction, where y-direction identifies the pitch. This method is often called 'pseudo-time', as the distance is based on the two different measurements where the difference in depth is taken from the CPT logging. First, a depth measurement \emph{d1} is performed, after which the probe is pressed down to the depth \emph{d2} to continue with the next measurement, Figure \ref{fig07} (b).
+
+An alternative to the above is to combine the limestone probe with seismic CPT approach. In cases where a more reliable determination of the \hl{soil }properties is needed, we recommend the application of these alternatives. An alternative to using \hl{the }seismic CPT is the up hole technique for quality control of the \hl{lime/cement} columns. \hl{This} methodology involves \hl{the installation of the }pipe in or near the centre of the column\hl{ which means that the pipe is installed using lime/cement column machine}. \hl{Such} technology was developed for installation of the measuring pipes \hl{and reported in previous }investigations \hl{of the }SGI \hl{in }SD Technical Report 35. This can be a good solution to \hl{quick} and easily \hl{installation of} the pipes for drilling. 
+
+\hl{After} the initial hardening \hl{of soil specimens}, the measurements \hl{of soil strength were performed using the following techniques}. On the top of the \hl{lime/cement column}, four accelerometers \hl{were} installed, positioned with a \hl{90\textdegree{} }angle between the accelerometers. The\hl{ test included the evaluation} of the P- and S-wave sources \hl{which were} lowered into the pipe to the \hl{target} depth, after which the probe \hl{was} clamped as a "packer"\hl{, }the waves \hl{were} excited and \hl{their velocity was} measured, Figure \ref{fig08}. The experiment \hl{was} repeated in the directions where the accelerometers are placed. After the measurements are finished on one level, the probe is moved up to the next level, \hl{where} the measurements \hl{continued} in an iterative manner.
+
+The advantage of this method is that it ensures a good contact between the columns and the accelerometers. Besides, the excitation wave and the location of the seismic source are very well defined. \hl{Moreover, }an additional advantage is that the measurements can be carried out by one person without costs for drilling rigs, which significantly decreases the financial costs in the project. However, \hl{there are also some }disadvantages of this method \hl{which should be mentioned}. The quality of the columns is usually the worst at the top. This can be solved either by excavating the top or by attaching the accelerometers at a deeper level. \hl{Another} disadvantage compared to the seismic CPT is that it is necessary to decide in advance which columns are to be measured. Therefore, in order to obtain a direct comparison with the limestone probe, a slotted pipe can be used for the up hole measurements, after which a normal \hl{test} with the limestone probe is carried out.
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_08.jpg}
+	\caption{Schematic sketch of the 'up hole' measurements of \hl{the lime/cement} column}
+\label{fig08}
+\end{figure}
+
+\subsection{Shear strength evaluation from CPT}
+
+The evaluation of the CPT probe has been performed using Conrad software, version 3.1. In a fine-grained soil, shear strength is primarily evaluated as the net peak pressure. An alternative method for clays is to use the generated pore overpressure. The empirical relationships developed for the conditions of Swedish soil are based on the evaluated dataset containing field measurements and laboratory data from a variety of soil types collected in Sweden. For natural clay soil, the relationship between the net peak pressure and shear strength is sensitive to the yield strength of soil (${W_L}$) and to some extent also to the degree of the \hl{overconsolidation ratio} \emph{(OCR)}, which is described according to the Equation \ref{eq:03}:
+
+\begin{equation}\label{eq:03}
+	c_u = \frac{q_t -\sigma _{\nu 0}}{13.4+6.65W_L} {\left(\frac{OCR}{1.3}\right)}^{-0.2}
+\end{equation}
+
+In cases where \hl{values} of the yield strength of clay \hl{are} missing, the Equation \ref{eq:04} is used instead: 
+
+\begin{equation}\label{eq:04}
+	c_u \approx \frac{q_t -\sigma _{\nu 0}}{N_{kt}}
+\end{equation}
+
+Where $N_{kt}$ (empirical confactor) is set to 16.3 for clay. In the Conrad evaluation software, $N_{kt}$ is denoted by $N_{11}$. For a binder-stabilized soil, there is not the same amount of the empirical evidence and therefore, not much literature about which value of $N_{kt}$ should be used. There are recommendations that $N_{kt}$ values should be set between 17--20 for a stabilized soil \citep{Larsson2017,Makusa}. Furthermore, there are limitations \hl{in evaluation of} the firmness in different layers of highly layered soil, because the tip pressure is affected from the above as underlying layer at a distance of 5 to 20 \hl{times }tip diameters. To evaluate a firmer layer in a loose soil using this method, the thickness of the layer \hl{should be} between \hl{4.4--4.7} m. In the opposite case, with a looser layer in a firmer soil, the thickness of soil layer should be between 0.2 to 0.4 m. This means that the \hl{diapason} of weakness in a \hl{lime/cement} column can easily be missed in a CPT evaluation. This becomes the most important issue for the evaluation of a \hl{lime/cement} column reinforcement in the shear zone.
+
+In a binder-stabilized soil, the pozzolanic reactions take place and continue for many months, \hl{therefore} the properties of \hl{the} stabilized soil (texture, structure, strength, etc.) partly change over time. \hl{For instance, }change in the texture of clay is based on the exchange of ions in the clay and change in water ratio. The ion exchange is described by the lyotropic series, as below: 
+
+\ch{Li+} $<$ \ch{Na+} $<$ \ch{H+} $<$ \ch{K+} $<$ \ch{NH4+} $<$$<$ \ce{Mg^{++}} $<$ \ch{Ca^{++}} $<$$<$ \ch{Al^{+++}}.
+
+The change in the structure of the clay mineral is shown in Figure \ref{fig09}.
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_09.jpg}
+	\caption{Change in texture and water-holding of clay as it moves from a sodium saturated system to a calcium-saturated system}
+\label{fig09}
+\end{figure}
+
+\hl{Thus,} the stabilized clay has change in plasticity, yield strength, and other parameters. The degree of change depends both on the type of clay mineral and on the type of binder. The changes \hl{in} the structure of the stabilized clay mean that the empirical relationships that exist between the tip pressure and shear strength of the original non-stabilised clay differ for a stabilized clay. To evaluate samples cured at different temperatures, soil specimens can be compared \hl{between} laboratory-processed samples cured in climate rooms at 7\textdegree C and \hl{those} fabricated \emph{in situ} under \hl{the }different temperature conditions. \hl{In this case, }the maturity number $M_T$ is defined according to \hl{the }Equation \ref{eq:05}: 
+
+\begin{equation}\label{eq:05}
+	M_T =[ 20+(T-20)\times K]^2 \times \sqrt{t}
+\end{equation}
+
+Where \emph{T} = temperature (\textdegree C), t = time (days), \emph{K} = material-dependent empirical constant.
+The material-dependent empirical constant \emph{K} is calculated by curing samples at different temperatures, e.g., 7\textdegree C and 20\textdegree C. The samples were then measured with resonance frequency measurement at different time intervals. The results from the seismic measurements were used to fit the curves so that they coincide, i.e., different values of \emph{K} are used, after which the curves are compared. A common value of \emph{K} accepted in this study is 0.5, although literature has also shown $K \approx 1$ \citep{Ahnberg}.
+
+\section{Results and Discussion}
+\subsection{Results of the \textcolor{blue}{lime/cement column} recipes}
+\subsubsection{Strength determination}
+
+In the testing of binder combinations, a reference recipe of \hl{the }OPC \hl{CEM II/A} and QL were used in a mutual ratio of 50/50\%. The evaluated shear strength for reference samples at different curing times is reported in Figure \ref{fig10}. Here the quantities of binders represented 80, 100 and 120 kg of binders per m\textsuperscript{3} of clay. The samples were stored in a climate room with a temperature of 7\textdegree C. The results show the higher strength in the samples stabilized with 120 kg of binders per m\textsuperscript{3} of clay, while the lowest values for the 80 kg of binder. Thus, on day 80 of stabilization, the highest values of shear strength reached 430, \hl{445} and 465 kPa for soil mixtures stabilized with 80, 100 and 120 kg of binders, respectively. This indicates that the amount of binders directly affects the strength of soil in the final output. 
+
+\begin{figure}[H]
+	\includegraphics[width=7cm]{Fig_10.jpg}
+	\caption{Shear strength as a function of \hl{curing} time for test specimens stabilized by a combination of CEM II/A and burned lime (50/50).}
+\label{fig10}
+\end{figure}
+
+In order to evaluate the effects of different combinations \hl{of binders }on shear strength of the stabilized soil material, a test setup was used supported by Pareto diagrams\hl{, }Figure \ref{fig11}. The Pareto chart shows the effect of the different components of binders on the stabilization results with achieved significance value \emph{p}=0.05. For a binder amount at 80 kg/m\textsuperscript{3}, the results show a clear positive interaction between various components (OPC, QL and LKD) in a binder combination, Figure \ref{fig11}. \hl{The }direct and positive interaction means that binder components generate a higher strength than can be expected from a linear regression between the effects of the individual binders. The model has an explanation rate of 95\%, i.e., it explains 95\% of the variations in shear strength. The setup of test for binder amount of 100 kg/m\textsuperscript{3} clay contains an extended number of tests. For comparison with other amounts of binders, the analysis was performed with the same number of trial points as for 80 and 120 kg of binders, respectively. The results \hl{of} this analysis \hl{show} a lower positive interaction between the binders. However, this should be compared with the result from the analysis of the extended trials. In a trial setup with more internal trial points, the resolution increases\hl{, }and the degree of the explanation rate of \hl{the }model increases \hl{as well, }from 95\% to 97.5\%. The extended model shows a greater interaction between various binder components for \hl{a }mix amount corresponding to 120 kg of binder per m\textsuperscript{3} of clay. At this mix amount, the positive interaction of the binder components was \hl{insignificant}. The degree of explanation of the response surface, according to \hl{the }Response Surface Methodology (RSM) \citep{MyersMontgomery,Montgomery} was 98\%.
+
+\begin{figure}[H]
+	\includegraphics[width=8cm]{Fig_11.jpg}
+	\caption{Pareto chart showing the effects of binders on soil stabilization with the significance level 0,05 for a mixture of 80 kg of binders per $m^3$ of soil}
+\label{fig11}
+\end{figure} 
+
+\subsubsection{Seismic measurements}
+
+Seismic measurements \hl{included the evaluation of the velocity of P-waves}, according to the resonance frequency method. The P-wave is an axial wave passing through the cylindrical specimen. In this case, the P-wave was correlated against the shear strength of the stabilized \hl{soil specimens}. For the dimensioning of \hl{the lime/cement} columns, the values of shear strength of the material were used. \hl{Various} binder recipes were assessed\hl{ for} shear strength of soil specimens obtained after a certain curing time. The connection between the P-wave velocity and the compressive strength is indirect and material-dependent, i.e., \hl{based} on the composition of \hl{the }soil material. A correlation between the S-wave velocity and shear strength of the stabilized soil is reported in Figure \ref{fig12}(a). 
+
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=8cm]{Fig_12a.jpg}
+		\caption{}
+	\end{subfigure} \\ \vfill
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=8cm]{Fig_12b.jpg}
+		\caption{}
+	\end{subfigure}
+	\caption{(a): Shear strength as a function of shear wave speed for stabilized clay from Norvik. (b): Shear strength as a function of P wave rate for stabilized Norvik samples.}
+\label{fig12}
+\end{figure}
+
+Here, shear wave velocity is adjusted according to the Equations \ref{eq:06} and \ref{eq:07} \citep{VERASTEGUIFLORES2015943}:
+
+\begin{equation}\label{eq:06}
+	\tau _{fu}=0.0424\times {V_s}^{1.462}
+\end{equation}
+
+\begin{equation}\label{eq:07}
+	\tau _{fu}=0.0021\times {V_s}^{1.9244}
+\end{equation}
+
+\hl{Here Equation} \ref{eq:06} \hl{comes from a reference data using Report 35, and Equation} \ref{eq:07} \hl{comes from the data investigation using stabilized clay from Norvik}. The results from the above measurements can be used for shear strength prediction based on measured P- and S-wave velocity from the \emph{in situ} measurements, e.g., with down hole measurements. For Norvik project, the major measurements were the P-waves \hl{where a} correlation between the P-wave \hl{velocity }and \hl{the }shear strength \hl{of the soil samples was evaluated and presented }in Figure \ref{fig12}(b). The relationship between the P-wave and shear strength corresponds to the Equation \ref{eq:08}:
+
+\begin{equation}\label{eq:08}
+	\tau _{fu}=0.0004\times {V_p}^{2.0497}
+\end{equation}
+
+To make a correct comparison between the different stabilized \hl{soil} samples \hl{solidified} with varying curing ages, ambient temperature was taken into account. Thus, in the laboratory tests, the specimens were stored in the climate rooms with a constant temperature maintained at 7\textdegree C, where exothermic energy from specimens is cooled away, which affected strength development in soil. In contrast, the temperature in the field is significantly higher due to the less \hl{effects from }cooling. 
+
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_13a.jpg}
+		\caption{}
+	\end{subfigure} \\ \vfill
+	\begin{subfigure}[b]{0.7\textwidth}
+		\includegraphics[width=0.7\textwidth]{Fig_13b.jpg}
+		\caption{}
+	\end{subfigure}
+	\caption{(a): P wave rate as a function of \hl{curing} time. (b): P wave rate as function of the maturity number, \hl{$M_T$}.}
+\label{fig13}
+\end{figure}
+
+The temperature in the field\hl{ }also \hl{depends} on the amount and type of binder. The comparison between \hl{the }samples hardened at different temperatures is most appropriately done using the maturity numbers. In Figure \ref{fig13}, the P-path measurements are reported as a function of curing time and recalculated to the maturity numbers on \hl{soil }samples cured in 7 and 20\textdegree C. In the calculation of the maturity rate (Equation \ref{eq:05}), the K factor \hl{was} set to \hl{0.55} by the empirical fitting. Figure \ref{fig13} shows the differences in \hl{the }evaluated strength between the samples cured in the laboratory conditions with \hl{those} from the \emph{in-situ} field measurements before the final strength is achieved. In Norvik project, no temperature measurements were carried out in the field. \hl{The} degree days were used as  measurement parameters of curing progress\hl{ of soil hardening to replace the }maturity numbers.
+
+\subsection{CPT soundings}
+
+The results from the CPT soundings are reported in in Figures \ref{fig17}, \ref{fig18}, \ref{fig19}, \ref{fig20}, \ref{fig21} and \ref{fig22}. In total, 7 different \hl{lime/cement} columns with a varying curing age between 9 days and 49 days were examined. The data for the investigated columns are summarised in Table \ref{tab:1}. \hl{Here the drilling below the column refers to the penetration level of the tool, which is 0,8 meters below the stabilised part. This is due to the fact that the mixing tool releases the binder above the bottom of the tool and normally it is not as much as 0,8 meters. The rise indicates the lifting, or ascend speed of the tool for each revolution while drilling cycle. }
+
+\begin{table*}[t]
+\begin{threeparttable}
+   \caption{Compilation of data from probed columns.}
+  \centering
+  \begin{tabular}{| c c c c c c c c c c c |}
+    Col. ID & \hl{Top} & \hl{Bottom} & Stab. \hl{len}. & \hl{Drill. below} & Aver. & \hl{Rise} & Date & SCPT Date & \hl{Cur. days} \\
+    \hl{ACS155} & -0.9 & -25.1 & 24.2 & 0.8 & 51.0 & 20 & 2016-10-12 & 2016-11-08 & 26 \\
+    \hl{ACW151} & -0.7 & -24.2 & 23.5 & 0.8 & 50.3 & 20 & 2016-10-11 & 2016-11-08 & 28 \\
+    \hl{ADA147} & -0.7 & -24.2 & 23.5 & 0.8 & 50.2 & 20 & 2016-10-10 & 2016-11-08 & 28 \\
+    \hl{ADC148} & -0.6 & -24.2 & 23.6 & 0.8 & 50.0 & 20 & 2016-10-10 & 2016-11-09 & 29 \\
+    \hl{AEA358} & 0.1 & -12.0 & 12.1 & 0.8 & 50.5 & 20 & 2016-10-31 & 2016-11-09 & 9 \\
+    \hl{AEG35} & -0.5 & -11.5 & 11.0 & 0.8 & 51.1 & 20 & 2016-09-19 & 2016-11-07 & 49 \\
+    \hl{AEE356} & -- & -- & -- & -- & -- & -- & -- & 2016-11-10 & --
+  \end{tabular}
+  \label{tab:1}
+   \begin{tablenotes}
+      \footnotesize
+      	\item \emph{Notations for Table 1.} Col. ID -- Column ID; \hl{Top -- Top level of column; Bottom -- Bottom level of column}; Stab. \hl{len.} -- Stabilized column length \hl{for binder LC/SC 50 kg}; \hl{Drill. below -- Drilling below column} (m); Aver. -- Average \hl{binder content }(Kg/m); \hl{Rise -- Lifting speed (mm/revolution)}; Date -- \hl{Production }date; LC/SC 50 kg; SCPT Date; \hl{Cur. days -- Curing time, days}
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table*}
+
+\begin{table*}[t]
+  \caption{Table showing evaluated results from seismic CPT for column \hl{ACS155}.}
+  \centering
+  \begin{tabular}{| c c c c c c c |}                         
+    Depth & P-wave & Ext. $c_u$ from P-wave & S-wave, x-dir. & S-wave y-dir. & S-wave mean & Ext. $c_u$ from S wave \\ \hline 
+    (m) & (m/s) & (kPa) & (m/s) & (m/s) & (m/s) & (kPa) \\ \hline
+    2.25 & 852 & 406 & 98.94 & 105.27 & 102.11 & 15 \\
+    2.75 & 877 & 431 & 121.06 & 115.52 & 118.29 & 20 \\
+    3.25 & 739 & 303 & 123.13 & 122.65 & 122.89 & 22 \\
+    3.75 & 766 & 326 & 127.6 & 125.87 & 126.74 & 23 \\
+    4.25 & 785 & 343 & 123.17 & 135.54 & 129.36 & 24 \\
+    4.75 & 620 & 212 & 149.97 & 158.2 & 149.09 & 32 \\
+    5.25 & 507 & 140 & 144.83 & 194.82 & 169.83 & 41 \\
+    5.75 & 410 & 91 & 152.01 & 200.14 & 176.08 & 44 \\
+    6.25 & 284 & 43 & 194.3 & 276.78 & 235.54 & 77 \\
+    6.75 & 750 & 313 & 245.61 & 274.35 & 259.98 & 93 \\
+    7.25 & 1395 & 1115 & 280.15 & 383.49 & 331.82 & 149 \\
+    7.75 & 1427 & 1169 & 325.17 & 488.08 & 406.63 & 220
+  \end{tabular}
+  \label{tab:2}
+\end{table*}
+
+Since there are significant uncertainties related to the evaluation of shear strength of the stabilized soil based on the peak pressure or pore pressure evaluated from the CPT sounding, this \hl{study includes the comparison of the } standardised values between the peak pressure \hl{$q_c$} and standardised results from seismic measurements. The normalisation was carried out by dividing the results by the largest value. Seismic measurements were recorded in the three lines, of which x- and y-lines represent shear wave measurements and z-line represent the compression wave measurements. The evaluations are reported in Figures \ref{fig17}, \ref{fig18}, \ref{fig19}, \ref{fig20}, \ref{fig21} and \ref{fig22}.  
+
+The measured parameters for the \hl{lime/cement} columns are reported in Figure \ref{fig14}: (a) -- ACS155; (b) -- ACW151; (c) -- ADA147; (d) -- ADC148; (e) -- AEG35; (f) -- AEE356; (g) -- AEA358. The results show a large variation\hl{ }and a very low tip resistance at the depth between 2 and 2.5 m below the ground surface, after which the tip pressure increases up \hl{to about} 10 MPa at the level of 3.5 m. Between\hl{ }5 and 8 m, the peak pressure reaches values of 1--3 MPa; at 8 m of depth it rises steeply to over 10 MPa. The sounding was interrupted at the depth of 10 m due to the stop caused by a high tip pressure. Measured friction shows the consistent results, although with some delay at the end of the probe. The results from seismic measurements show a good agreement between the shear waves in the x and y directions. 
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14a.jpg}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14b.jpg}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14c.jpg}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14d.jpg}
+		\caption{}
+	\end{subfigure}
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14e.jpg}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14f.jpg}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.9\textwidth]{Fig_14g.jpg}
+		\caption{}
+	\end{subfigure}%
+\caption{Evaluated results from \hl{the }CPT probing of the \hl{lime/cement columns}: (a) -- ACS155; (b) -- ACW151; (c) -- ADA147; (d) -- ADC148; (e) -- AEG35; (f) -- AEE356; (g) -- AEA358. \hl{Start and end depths of the seven test columns: (a): 2.00--10.22 m; (b): 2.00--13.50 m; (c): 2.00--12.50 m; (d): 2.00--12.98 m; (e): 2.00--12.62 m; (f): 2.00--7.48 m; (g): 2.00--14.56 m.}}
+\label{fig14}
+\end{figure*}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.65\textwidth]{Fig_15a.jpg}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.77\textwidth]{Fig_15b.jpg}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.70\textwidth]{Fig_15c.jpg}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.70\textwidth]{Fig_15d.jpg}
+		\caption{}
+	\end{subfigure}
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.70\textwidth]{Fig_15e.jpg}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=0.75\textwidth]{Fig_15f.jpg}
+		\caption{}
+	\end{subfigure}%
+\caption{Normalized peak pressure, S-wave and P-wave for \hl{the lime/cement} columns: (a) -- ACS155; (b) -- ACW151; (c) -- ADA147; (d) --  ADC148; (e) -- AEA358; (f) -- AEG35.}
+\label{fig15}
+\end{figure*}
+
+However, the high peak pressure around the level of 3.5 m\hl{ }is not achieved. The compression wave shows a better agreement with the peak pressure and the evaluated P-wave velocities\hl{ }for various columns\hl{, }see Figure \ref{fig15}. The P-wave velocity down to the level of 7 m is within the compression wave velocities measured in the laboratory, see Figure \ref{fig17}(a) and Figure \ref{fig12}(b). The values are, however, quite high, especially considering that the curing age of the \hl{column} at the time of probing was only 26 days. 
+
+Measured shear wave speed for the columns is reported in Figures \ref{fig17} to \ref{fig22} for various directions. The graph shows the results from the evaluated shear wave excited from both right and left in x-direction, \hl{the means of} signals. The results show\hl{ generally} low shear wave velocities. Table \ref{tab:2} shows P- and S-wave velocities for column ACS155. The table also contains calculated shear strength values based on \hl{the correlation determined in the }laboratory. It is clear that the\hl{ soil }strength \hl{evaluated using} P-wave measurements \hl{is} relatively high with values above the actual strength, while strength evaluated \hl{using} S-wave measurements \hl{shows values} clearly below the expected \hl{results}. Down to a depth of 6 \hl{m}, the evaluated strength values are only slightly above the initial strength values of natural clay. Figure \ref{fig14} shows the \hl{results of testing }various columns. These results in column ACS155 (Figure \ref{fig14} (a)) indicate a significant difference compared to a probing in natural clay, cf. Figure \ref{fig14} (f) in column AEE356. The results from the probing of column ACS155 indicate that based on the seismic CPT sounding, the soil has been reinforced with a very solid part around 3.5 m below the ground surface.
+
+The evaluated CPT sounding for \hl{column} ACW151 is reported in Figure \ref{fig14} (b). The peak pressure varies from $<0.5$ MPa to $>4$ MPa. This may appear to be low for a column that was cured during 28 days at the time of probing. For column ACW151, the \hl{standardised} values between \hl{the }peak pressure, P- and S-wave show \hl{rather }poor agreement, see Figure \ref{fig15} (b). The evaluated S-wave here gives a fairly good agreement between the x- and y-directions, but does not follow the results from the peak pressure. The highest evaluated P-wave velocity is almost 5000 m/s, which is in parity with the velocities in steel columns. The probing results from the CPT\hl{ }of \hl{the }column ADA147 are reported in Figure \ref{fig14} (c). Here the tip pressure varies from about 0.5 MPa up to over 6 MPa. This shows a very large variation in strength and indicates difficulties in assessing the strength of a column based on the CPT\hl{. }Figure \ref{fig15} (c) shows \hl{the }standardised values for \hl{the }column ADA147. The shear wave velocities\hl{ }show low strength values\hl{, Figure }\ref{fig21}. \hl{Seismic testing gives} a bulk modulus values which \hl{do} not have large variations in peak pressure but rather an average value. The correlation between the peak pressure and shear wave velocities is low. The evaluated compression wave speed shows values above 2000 m/s.
+
+The column ADC148 also shows large variations in \hl{the }measured tip pressure. The CPT\hl{ }appears to have exited the column about 9 \hl{m} below the ground surface\hl{, }Figure \ref{fig14} (d). This column shows an abnormally large difference in shear wave between the values measured in X-direction and Y-direction. Neither the S- nor P-wave velocities show a good agreement with the tip resistance\hl{, }Figure \ref{fig15} (d). The P-wave velocities here vary between 1000 and 2000 m/s which does not reflect the expected strength. The sounding result from the column AEA358 shows a similar pattern to the other columns\hl{, }Figure \ref{fig14} (g). The peak pressure \hl{here }shows very low values at 7.5 \hl{m}\hl{ of depth. }The evaluated shear wave velocities here give a credible values of shear strength, c.m.f. Figure \ref{fig20}, but does not reflect the variation in peak pressure\hl{, }Figure \ref{fig15} (e). The\hl{ test }results for column AEG35 are reported in Figure \ref{fig14} (e). This sounding also shows large variations in tip pressure, which makes it difficult to find a connection between the CPT sounding results and the shear wave velocities\hl{, }Figure \ref{fig15} (f). 
+
+\section{Conclusion}
+
+The laboratory testing showed a high repeatability between the trials of seismic measurements. The variation in values of \hl{the }compressive strength and shear strength \hl{slightly }increased\hl{ during }the period of \hl{soil }stabilization and increased strength of soil\hl{. This is explained by} minor defects and inaccuracies in the test specimens \hl{which }have a greater effect on strength and result in higher resistance. The results from the field \hl{tests} show large variations in tip resistance, but also large variations in shear and compression wave velocities. These results were partly expected but the hypothesis was to find the same trends in the peak pressure and in seismic results. At the seismic CPT\hl{, }there are several uncertainty factors regarding \hl{the }seismic measurements which will be investigated in further steps of research. \hl{These include the question of }how the generated S and P waves \hl{are }transmitted to the column \hl{and whether} there \hl{are }cross signals originating from other sources of vibration. \hl{Further, the issues include the investigation of} how well shear and compression waves are generated at greater depths, and to \hl{precise the position of probe within the column}.
+    
+Seismic CPT has many advantages over the traditional CPT. To ensure that the CPT probe is in the column, a resistivity CPT can be connected there because the stabilized soil has a much lower resistivity due to free ions. One of the great advantages of seismic CPT is that \hl{it enables to measure }the compressive \hl{strength} and \hl{to apply seismic measurements as }determination of the P- and S-wave \hl{velocities}. Another important parameter for seismic CPT is the financial costs of the works and technical equipment. Here, both a drilling rig and \hl{a }special expensive equipment are required\hl{. This results in }the fact that \hl{this} method is currently quite time-consuming and financially costly. By using a better signal source in seismic methods, some of the disadvantages of the methods can be eliminated. Therefore, this methodology can be a way to evaluate the effects of \hl{the lime/cement} columns but cannot compete in terms of cost with the limestone column probes.
+
+\section{Abbreviations}
+\begin{tabular}{@{}ll}
+\hl{ASCII} & \hl{American Standard Code for Information Interchange} \\
+\hl{CPT} & \hl{Cone Penetration Testing} \\
+\hl{DSM} & \hl{Deep Soil Mixing} \\
+\hl{FEM} & \hl{Finite Element Method} \\
+\hl{LKD} & \hl{Lime Kiln Dust} \\
+\hl{OPC} & \hl{Ordinary Portland Cement} \\
+\hl{OCR} & \hl{Overconsolidation Ratio} \\
+\hl{QL} & \hl{Quick Lime} \\
+\hl{SPT} & \hl{Standard Penetration Test} \\
+\hl{SGI} & \hl{Swedish Geotechnical Institute} \\
+\hl{UCS} & \hl{Uniaxial Compressive Strength}
+\end{tabular}
+
+
+\section{Acknowledgements}
+We are grateful to Helen Åhnberg and Rolf Larsson for project idea development, Roger Wisén (Ramböll) and Prof. Dr. Nils Rydén (LTH/Peab) for their support with data modelling and simulations, and Torbjörn Edstam, Skanska for the review and valuable comments. We thank the anonymous reviewers and technical editor who provided careful reading and constructive commenting of this work. 
+
+\section{Funding}
+The Port of Stockholm \hl{Management}, \hl{Nordic Construction Company} (NCC) and GeoMind \hl{KB Engineering Consultancy} are acknowledged for \hl{the }assistance with data collection and support with\hl{ }survey. The Swedish Transport Administration, Skanska Group AB and the Development Fund of the Swedish Construction Industry (SBUF) provided financial contribution to this project. The authors express gratitude to \hl{the} Swedish Maritime Administration (SMA) \hl{and} Cemex AB for provided adhesives and \hl{technical }support of \hl{this research} project.
+
+%\newpage
+\appendix
+\section[\appendixname~\thesection]{An \hl{example of the }protocol evaluated using Conrad v.3.1}
+
+\begin{figure}[H]
+	\includegraphics[width=12cm]{Fig_16.jpg}
+	\caption{A protocol with standard scales evaluated using Conrad software, version 3.1.}
+\label{fig16}
+\end{figure}
+
+%\section[\appendixname~\thesection]{Evaluation P- and S-wave velocity}
+\section{Supplementary Material}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.55\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_17a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.55\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_17b}
+		\caption{}
+	\end{subfigure}	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.55\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_17c}
+		\caption{}
+	\end{subfigure}%
+	\caption{Signals for AEG35 column}
+\label{fig17}
+\end{figure*}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_18a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_18b}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_18c}
+		\caption{}
+	\end{subfigure}%
+	\caption{Signals for ADC148 column}
+\label{fig18}
+\end{figure*}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_19a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_19b}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_19c}
+		\caption{}
+	\end{subfigure}%
+\caption{Signals for ACS155 column}
+\label{fig19}
+\end{figure*}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_20a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_20b}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_20c}
+		\caption{}
+	\end{subfigure}%
+\caption{Signals for AEA358 column}
+\label{fig20}
+\end{figure*}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_21a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_21b}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_21c}
+		\caption{}
+	\end{subfigure}%
+\caption{Signals for ADA147 column}
+\label{fig21}
+\end{figure*}
+
+\begin{figure*}[!htbp]
+\centering
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_22a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_22b}
+		\caption{}
+	\end{subfigure}%
+	\\ \vfill \vspace{1mm}
+	\begin{subfigure}[b]{.5\textwidth}
+		\centering
+			\includegraphics[width=7cm]{Fig_22c}
+		\caption{}
+	\end{subfigure}%
+\caption{Signals for ACW151 column}
+\label{fig22}
+\end{figure*}
+
+\newpage
+%\bibliographystyle{elsarticle-num} 
+%\bibliographystyle{plain}
+\bibliographystyle{elsarticle-harv}
+%\bibliographystyle{apalike}
+\bibliography{References_AA.bib}
+%\nocite*{}
+
+\end{document}
+\endinput

@@ -30,6 +30,7 @@
 \usepackage[super]{nth}
 \usepackage[]{natbib}
 \usepackage{soul}
+%\usepackage{apacite}
 
 \journal{Archives of Acoustics}
 
@@ -279,7 +280,7 @@ The material-dependent empirical constant \emph{K} is calculated by curing sampl
 In the testing of binder combinations, a reference recipe of the OPC CEM II/A and QL were used in a mutual ratio of 50/50\%. The evaluated shear strength for reference samples at different curing times is reported in Figure \ref{fig10}. Here the quantities of binders represented 80, 100 and 120 kg of binders per m\textsuperscript{3} of clay. The samples were stored in a climate room with a temperature of 7\textdegree C. The results show the higher strength in the samples stabilized with 120 kg of binders per m\textsuperscript{3} of clay, while the lowest values for the 80 kg of binder. Thus, on day 80 of stabilization, the highest values of shear strength reached 430, 445 and 465 kPa for soil mixtures stabilized with 80, 100 and 120 kg of binders, respectively. This indicates that the amount of binders directly affects the strength of soil in the final output. 
 
 \begin{figure}[H]
-	\includegraphics[width=7cm]{Fig_10.jpg}
+	\includegraphics[width=7.5cm]{Fig_10.jpg}
 	\caption{Shear strength as a function of curing time for test specimens stabilized by a combination of CEM II/A and burned lime (50/50).}
 \label{fig10}
 \end{figure}
@@ -336,7 +337,7 @@ To make a correct comparison between the different stabilized soil samples solid
 		\includegraphics[width=0.7\textwidth]{Fig_13b.jpg}
 		\caption{}
 	\end{subfigure}
-	\caption{(a): P wave rate as a function of curing time. (b): P wave rate as function of the maturity number, $M_T$}.
+	\caption{(a): P wave rate as a function of curing time. (b): P wave rate as function of the maturity number, $M_T$.}
 \label{fig13}
 \end{figure}
 
@@ -438,43 +439,43 @@ The measured parameters for the lime/cement columns are reported in Figure \ref{
 \label{fig14}
 \end{figure*}
 
-\begin{figure*}[!htbp]
-\centering
-	\begin{subfigure}[b]{.5\textwidth}
-		\centering
-			\includegraphics[width=0.65\textwidth]{Fig_15a.jpg}
-		\caption{}
+\begin{figure}[H]
+\makebox[1.00\linewidth][r]{%
+	\begin{subfigure}[b]{.40\textwidth}
+		%\centering
+			\hspace{35pt}\includegraphics[width=6.0cm]{Fig_15a.jpg}
+		\caption{2013}
 	\end{subfigure}%
-	\begin{subfigure}[b]{.5\textwidth}
-		\centering
-			\includegraphics[width=0.77\textwidth]{Fig_15b.jpg}
-		\caption{}
+	\begin{subfigure}[b]{.40\textwidth}
+		%\centering
+			\hspace{25pt}\includegraphics[width=7.2cm]{Fig_15b.jpg}
+		\caption{2015}
 	\end{subfigure}%
-	\\ \vfill \vspace{1mm}
-	\begin{subfigure}[b]{.5\textwidth}
-		\centering
-			\includegraphics[width=0.70\textwidth]{Fig_15c.jpg}
-		\caption{}
+	\begin{subfigure}[b]{.40\textwidth}
+		%\centering
+			\hspace{45pt}\includegraphics[width=4.8cm]{Fig_15c.jpg}
+		\caption{2018}
 	\end{subfigure}%
-	\begin{subfigure}[b]{.5\textwidth}
-		\centering
-			\includegraphics[width=0.70\textwidth]{Fig_15d.jpg}
-		\caption{}
-	\end{subfigure}
-	\\ \vfill \vspace{1mm}
-	\begin{subfigure}[b]{.5\textwidth}
-		\centering
-			\includegraphics[width=0.70\textwidth]{Fig_15e.jpg}
-		\caption{}
+}\\
+\vfill \vspace{1mm}
+\makebox[1.00\linewidth][r]{%
+	\begin{subfigure}[b]{.40\textwidth}
+		%\centering
+			\hspace{30pt}\includegraphics[width=6.0cm]{Fig_15d.jpg}
+		\caption{2020}
 	\end{subfigure}%
-	\begin{subfigure}[b]{.5\textwidth}
-		\centering
-			\includegraphics[width=0.75\textwidth]{Fig_15f.jpg}
-		\caption{}
+	\begin{subfigure}[b]{.40\textwidth}
+		%\centering
+			\hspace{30pt}\includegraphics[width=6.3cm]{Fig_15e.jpg}
+		\caption{2021}
 	\end{subfigure}%
-\caption{Normalized peak pressure, S-wave and P-wave for the lime/cement columns: (a) -- ACS155; (b) -- ACW151; (c) -- ADA147; (d) --  ADC148; (e) -- AEA358; (f) -- AEG35.}
-\label{fig15}
-\end{figure*}
+	\begin{subfigure}[b]{.40\textwidth}
+		%\centering
+			\hspace{30pt}\includegraphics[width=6.3cm]{Fig_15f.jpg}
+		\caption{2022}
+	\end{subfigure}%
+}\caption{Normalized peak pressure, S-wave and P-wave for the lime/cement columns: (a) -- ACS155; (b) -- ACW151; (c) -- ADA147; (d) --  ADC148; (e) -- AEA358; (f) -- AEG35.}\label{fig15}
+\end{figure}
 
 However, the high peak pressure around the level of 3.5 m is not achieved. The compression wave shows a better agreement with the peak pressure and the evaluated P-wave velocities for various columns, see Figure \ref{fig15}. The P-wave velocity down to the level of 7 m is within the compression wave velocities measured in the laboratory, see Figure \ref{fig17}(a) and Figure \ref{fig12}(b). The values are, however, quite high, especially considering that the curing age of the column at the time of probing was only 26 days. 
 
@@ -657,10 +658,12 @@ The Port of Stockholm Management, Nordic Construction Company (NCC) and GeoMind 
 \end{figure*}
 
 \newpage
+% NO \bibliographystyle{elsarticle-harv}
 %\bibliographystyle{elsarticle-num} 
 %\bibliographystyle{plain}
-\bibliographystyle{elsarticle-harv}
-%\bibliographystyle{apalike}
+\bibliographystyle{apalike}
+%\bibliographystyle{dinat}
+%\bibliographystyle{apacite}
 \bibliography{References_AA.bib}
 %\nocite*{}
 
